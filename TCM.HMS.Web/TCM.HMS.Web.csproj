@@ -494,6 +494,9 @@
     <Compile Include="App_Start\HMSNavigationProvider.cs" />
     <Compile Include="App_Start\HMSWebModule.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\ThemeBuildManagerViewEngine .cs" />
+    <Compile Include="App_Start\ThemeRazorViewEngine.cs" />
+    <Compile Include="App_Start\ThemeVirtualPathProviderViewEngine.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\Layout\LanguageSelectionViewModel.cs" />
@@ -541,6 +544,10 @@
     <ProjectReference Include="..\TCM.HMS.WebApi\TCM.HMS.WebApi.csproj">
       <Project>{5eb52d3d-09fd-463a-b02a-8d9856bd3724}</Project>
       <Name>TCM.HMS.WebApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="App_Module\Admin\TCM.HMS.Web.Admin.csproj">
+      <Project>{0a8e69b6-d1d2-4afe-adec-3dca3f473708}</Project>
+      <Name>TCM.HMS.Web.Admin</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

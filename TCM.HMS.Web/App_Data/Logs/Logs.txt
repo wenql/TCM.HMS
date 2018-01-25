@@ -48,3 +48,454 @@ DEBUG 2018-01-25 21:23:21,059 [25   ] Abp.Localization.LocalizationManager     -
 DEBUG 2018-01-25 21:23:21,182 [25   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
 WARN  2018-01-25 21:23:27,017 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
 WARN  2018-01-25 21:23:27,061 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 22:52:44,912 [31   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-25 22:52:44,917 [31   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 22:52:44,918 [31   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 22:52:44,918 [31   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-25 23:15:09,169 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:15:09,181 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:15:09,185 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,186 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,188 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:09,190 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:15:09,410 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:15:10,609 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:15:10,635 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:15:10,636 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:15:10,638 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:15:10,737 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:15:15,533 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:15:15,562 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 23:18:48,242 [18   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-25 23:18:48,242 [18   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:18:48,242 [18   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:18:48,242 [18   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-25 23:18:51,615 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:18:51,625 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:18:51,629 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:51,634 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:18:51,823 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:18:52,539 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:18:52,543 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:18:52,543 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:18:52,544 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:18:52,632 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:18:57,006 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:18:57,034 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 23:20:20,051 [14   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-25 23:20:20,051 [14   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:20:20,067 [14   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:20:20,067 [14   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-25 23:32:22,341 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:32:22,352 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:32:22,356 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,357 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,357 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,358 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,358 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,358 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,358 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,358 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,358 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,358 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,358 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,359 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:22,361 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:32:22,560 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:32:23,356 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:32:23,360 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:32:23,361 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:32:23,362 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:32:23,459 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:32:27,894 [34   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:32:27,921 [34   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 23:32:45,168 [32   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-25 23:32:45,169 [32   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:32:45,169 [32   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:32:45,169 [32   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-25 23:33:00,213 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:33:00,225 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:33:00,229 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,231 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,231 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,231 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,231 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,231 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,232 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,232 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,232 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,232 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,232 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,232 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:00,235 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:33:00,438 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:33:01,194 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:33:01,198 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:33:01,199 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:33:01,200 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:33:01,293 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:33:59,369 [35   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-25 23:33:59,370 [35   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:33:59,371 [35   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:33:59,371 [35   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-25 23:34:10,310 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:34:10,327 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:34:10,332 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,335 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,336 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,336 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,337 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,337 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:10,340 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:34:10,610 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:34:12,227 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:34:12,247 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:34:12,248 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:34:12,250 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:34:12,389 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:34:12,581 [5    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:34:12,606 [5    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 23:35:20,597 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:35:20,610 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:35:20,615 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,616 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,616 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,617 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,617 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,617 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,617 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,617 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,617 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,617 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,617 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,618 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:20,621 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:35:20,862 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:35:22,048 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:35:22,067 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:35:22,068 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:35:22,070 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:35:22,171 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:35:27,241 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:35:27,275 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 23:35:55,535 [11   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-25 23:35:55,535 [11   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:35:55,536 [11   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:35:55,536 [11   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-25 23:36:03,357 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:36:03,369 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:36:03,373 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,374 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,375 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,375 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,375 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,375 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,375 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,375 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,375 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,376 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,376 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,376 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:03,379 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:36:03,639 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:36:05,169 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:36:05,191 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:36:05,193 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:36:05,196 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:36:05,330 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:36:11,121 [7    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:36:11,161 [7    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 23:44:55,868 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:44:55,880 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:44:55,884 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,886 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,886 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,886 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,886 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,886 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,886 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,886 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:55,889 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:44:56,127 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:44:57,400 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:44:57,431 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:44:57,432 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:44:57,434 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:44:57,551 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:45:02,885 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:45:02,915 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 23:50:13,683 [25   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-25 23:50:13,684 [25   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:50:13,684 [25   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:50:13,684 [25   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-25 23:50:17,574 [34   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:50:17,587 [34   ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:50:17,592 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,594 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,594 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,594 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,594 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,594 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,595 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,595 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,595 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,595 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,595 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,595 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:17,598 [34   ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:50:17,827 [34   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:18,584 [34   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:50:18,588 [34   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:50:18,589 [34   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:50:18,590 [34   ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:50:18,685 [34   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:50:23,222 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:50:23,250 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 23:50:45,255 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:50:45,385 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:50:45,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,391 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,391 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,391 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,391 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,391 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:45,395 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:50:45,810 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:50:46,000 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:50:46,027 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:50:46,030 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:50:46,037 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:50:46,254 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:50:48,760 [9    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:50:48,793 [9    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 23:51:36,866 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:51:36,976 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:51:36,980 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,983 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,983 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,983 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,983 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,983 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:36,986 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:51:37,385 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:51:37,570 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:51:37,599 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:51:37,600 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:51:37,602 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:51:37,796 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-25 23:52:12,792 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:52:12,919 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:52:12,923 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:12,929 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:52:13,322 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:52:13,523 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:52:13,571 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:52:13,572 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:52:13,575 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:52:13,826 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:52:58,909 [7    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:52:59,011 [7    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-25 23:56:07,863 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 23:56:07,875 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-25 23:56:07,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:07,885 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-25 23:56:08,114 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 23:56:09,296 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 23:56:09,323 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 23:56:09,325 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-25 23:56:09,327 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-25 23:56:09,437 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-25 23:56:14,473 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-25 23:56:14,507 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-26 00:02:05,090 [37   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-26 00:02:05,091 [37   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-26 00:02:05,091 [37   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-26 00:02:05,091 [37   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-26 00:03:00,181 [45   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-26 00:03:00,193 [45   ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-26 00:03:00,197 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,198 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,199 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,199 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,199 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,199 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,199 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,199 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,199 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,199 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,199 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,200 [45   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:00,202 [45   ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-26 00:03:00,405 [45   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:01,161 [45   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-26 00:03:01,165 [45   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-26 00:03:01,166 [45   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-26 00:03:01,167 [45   ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-26 00:03:01,263 [45   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-26 00:03:06,482 [38   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-26 00:03:06,513 [38   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-26 00:03:14,475 [38   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-26 00:03:14,476 [38   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-26 00:03:14,476 [38   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-26 00:03:14,476 [38   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-26 00:03:23,569 [39   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-26 00:03:23,580 [39   ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-26 00:03:23,584 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,586 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,586 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,586 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,586 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,586 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,586 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,586 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,587 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,587 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,587 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,587 [39   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:23,589 [39   ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-26 00:03:23,792 [39   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:03:24,544 [39   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-26 00:03:24,548 [39   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-26 00:03:24,549 [39   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-26 00:03:24,550 [39   ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-26 00:03:24,642 [39   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-26 00:03:29,561 [36   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-26 00:03:29,586 [36   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-26 00:03:50,547 [40   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-26 00:03:50,548 [40   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-26 00:03:50,548 [40   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-26 00:03:50,548 [40   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-26 00:06:11,056 [9    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-26 00:06:11,068 [9    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-26 00:06:11,073 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,075 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,075 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,075 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,075 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,075 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,075 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,075 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,075 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,075 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,076 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,076 [9    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:11,078 [9    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-26 00:06:11,279 [9    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:06:12,042 [9    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-26 00:06:12,047 [9    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-26 00:06:12,048 [9    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-26 00:06:12,049 [9    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-26 00:06:12,140 [9    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-26 00:06:17,167 [14   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-26 00:06:17,201 [14   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-26 00:08:09,742 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-26 00:08:09,889 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-01-26 00:08:09,893 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:09,899 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-01-26 00:08:10,320 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:08:10,516 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-26 00:08:10,545 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-26 00:08:10,545 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-26 00:08:10,548 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-26 00:08:10,748 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-26 00:08:20,122 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-26 00:08:20,151 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-01-26 00:09:02,905 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-26 00:09:02,919 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-01-26 00:09:02,923 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.Admin.HMSWebAdminModule, TCM.HMS.Web.Admin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:02,930 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2018-01-26 00:09:03,190 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-26 00:09:08,001 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-26 00:09:08,030 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-26 00:09:08,031 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-26 00:09:08,034 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HMS
+DEBUG 2018-01-26 00:09:08,152 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2018-01-26 00:09:16,669 [7    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-01-26 00:09:16,700 [7    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
