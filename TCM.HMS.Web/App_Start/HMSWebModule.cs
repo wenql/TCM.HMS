@@ -8,7 +8,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using TCM.HMS.Web.Admin;
 
 namespace TCM.HMS.Web
 {
@@ -16,8 +15,7 @@ namespace TCM.HMS.Web
         typeof(AbpWebMvcModule),
         typeof(HMSDataModule), 
         typeof(HMSApplicationModule), 
-        typeof(HMSWebApiModule),
-        typeof(HMSWebAdminModule))]
+        typeof(HMSWebApiModule))]
     public class HMSWebModule : AbpModule
     {
         public override void PreInitialize()
@@ -43,9 +41,6 @@ namespace TCM.HMS.Web
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
-            //Replace default ViewEngine
-            ViewEngines.Engines.Clear();
-            ViewEngines.Engines.Add(new ThemeRazorViewEngine());
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
