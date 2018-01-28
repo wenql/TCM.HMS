@@ -1,29 +1,12 @@
-﻿@{
-    ViewBag.ActiveMenu = "Home"; //The menu item will be active for this page.
-}
-<div>
-    <h1>@L("WelcomeMessage")!</h1>
-    <p class="lead">@L("Home_ThisIsATemplate")</p>
-    <div class="row">
-        <div class="col-md-4">
-            <h3>ASP.NET MVC</h3>
-            <p>
-                @L("Home_AspNetDescription")
-            </p>
-            <a class="btn btn-primary btn-sm" href="http://asp.net/mvc">@L("LearnMore")..</a>
-        </div>
-        <div class="col-md-4">
-            <h3>ASP.NET Boilerplate</h3>
-            <p>
-                @L("Home_AspNetBoilerplateDescription")
-            </p>
-            <a class="btn btn-primary btn-sm" href="http://aspnetboilerplate.com">@L("LearnMore")..</a>
-        </div>
-        <div class="col-md-4">
-            <h3>@L("Others")</h3>
-            <p>
-                @L("Home_OtherTools")
-            </p>
-        </div>
-    </div>
-</div>
+﻿<section class="content-header">
+    <h1>
+        Fixed Layout
+        <small>Blank example to the fixed layout</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Layout</a></li>
+        <li class="active">Fixed</li>
+    </ol>
+</section>
+<section class="content"></section>

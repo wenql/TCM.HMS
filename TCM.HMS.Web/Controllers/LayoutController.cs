@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using Abp.Application.Navigation;
-using Abp.Localization;
 using Abp.Runtime.Session;
 using Abp.Threading;
 using TCM.HMS.Web.Models.Layout;
@@ -10,39 +9,31 @@ namespace TCM.HMS.Web.Controllers
     public class LayoutController : HMSControllerBase
     {
         private readonly IUserNavigationManager _userNavigationManager;
-        private readonly ILanguageManager _languageManager;
 
-        public LayoutController(
-            IUserNavigationManager userNavigationManager, 
-            ILocalizationManager localizationManager,
-            ILanguageManager languageManager)
+        /// <summary>
+        /// Layout
+        /// </summary>
+        /// <param name="userNavigationManager"></param>
+        public LayoutController(IUserNavigationManager userNavigationManager)
         {
             _userNavigationManager = userNavigationManager;
-            _languageManager = languageManager;
         }
 
+        /// <summary>
+        /// getSidebar
+        /// </summary>
+        /// <param name="activeMenu"></param>
+        /// <returns></returns>
         [ChildActionOnly]
-        public PartialViewResult TopMenu(string activeMenu = "")
+        public PartialViewResult SideBarNav(string activeMenu = "")
         {
-            var model = new TopMenuViewModel
-                        {
-                            MainMenu = AsyncHelper.RunSync(() => _userNavigationManager.GetMenuAsync("MainMenu", AbpSession.ToUserIdentifier())),
-                            ActiveMenuItemName = activeMenu
-                        };
+            var model = new SideBarNavViewModel
+            {
+                MainMenu = AsyncHelper.RunSync(() => _userNavigationManager.GetMenuAsync("MainMenu", AbpSession.ToUserIdentifier())),
+                ActiveMenuItemName = activeMenu
+            };
 
-            return PartialView("_TopMenu", model);
-        }
-
-        [ChildActionOnly]
-        public PartialViewResult LanguageSelection()
-        {
-            var model = new LanguageSelectionViewModel
-                        {
-                            CurrentLanguage = _languageManager.CurrentLanguage,
-                            Languages = _languageManager.GetLanguages()
-                        };
-
-            return PartialView("_LanguageSelection", model);
+            return PartialView("_SideBarNav", model);
         }
     }
 }

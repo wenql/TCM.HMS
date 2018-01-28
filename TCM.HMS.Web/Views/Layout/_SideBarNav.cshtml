@@ -1,0 +1,41 @@
+﻿@using Abp.Collections.Extensions
+@using TCM.HMS.Web.Views
+@model TCM.HMS.Web.Models.Layout.SideBarNavViewModel
+@{
+    var calculateMenuUrl = new Func<string, string>((url) => !string.IsNullOrEmpty(url) && !UrlChecker.IsRooted(url) ? ApplicationPath + url : (string.IsNullOrEmpty(url) ? ApplicationPath : url));
+}
+<ul class="sidebar-menu" data-widget="tree">
+    <li class="header">导航菜单</li>
+    @foreach (var menuItem in Model.MainMenu.Items)
+    {
+        if (!menuItem.Items.Any())
+        {
+            <li class="@(Model.ActiveMenuItemName == menuItem.Name ? "active" : "")">
+                <a href="@calculateMenuUrl(menuItem.Url)">
+                    <i class="@menuItem.Icon"></i> <span>@menuItem.DisplayName</span>
+                </a>
+            </li>
+        }
+        else
+        {
+            <li class="@(menuItem.Items.Any(x=>x.Name==Model.ActiveMenuItemName)? "treeview active" : "treeview")">
+                <a href="#">
+                    <i class="@menuItem.Icon"></i> <span>@menuItem.DisplayName</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    @foreach (var subMenuItem in menuItem.Items)
+                    {
+                        <li class="@(Model.ActiveMenuItemName == subMenuItem.Name ? "active" : "")">
+                            <a href="@calculateMenuUrl(subMenuItem.Url)">
+                                <i class="fa fa-circle-o"></i> @subMenuItem.DisplayName
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+        }
+    }
+</ul>

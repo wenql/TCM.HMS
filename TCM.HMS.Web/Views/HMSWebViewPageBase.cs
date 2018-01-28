@@ -11,7 +11,6 @@ namespace TCM.HMS.Web.Views
     {
         protected HMSWebViewPageBase()
         {
-            LocalizationSourceName = HMSConsts.LocalizationSourceName;
         }
     }
 }

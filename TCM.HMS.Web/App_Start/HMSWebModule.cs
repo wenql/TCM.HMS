@@ -20,22 +20,9 @@ namespace TCM.HMS.Web
     {
         public override void PreInitialize()
         {
-            //Add/remove languages for your application
-            Configuration.Localization.Languages.Add(new LanguageInfo("en", "English", "famfamfam-flag-england", true));
-            Configuration.Localization.Languages.Add(new LanguageInfo("zh-CN", "简体中文", "famfamfam-flag-cn"));
-
-            //Add/remove localization sources here
-            Configuration.Localization.Sources.Add(
-                new DictionaryBasedLocalizationSource(
-                    HMSConsts.LocalizationSourceName,
-                    new XmlFileLocalizationDictionaryProvider(
-                        HttpContext.Current.Server.MapPath("~/Localization/HMS")
-                        )
-                    )
-                );
-
             //Configure navigation/menu
             Configuration.Navigation.Providers.Add<HMSNavigationProvider>();
+            Configuration.Localization.IsEnabled = false;
         }
 
         public override void Initialize()
