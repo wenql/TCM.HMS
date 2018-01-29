@@ -51,7 +51,10 @@
         );
 
         return $.Deferred(function ($dfd) {
-            sweetAlert(opts).then(function () {
+            //sweetAlert(opts).then(function () {
+            //    $dfd.resolve();
+            //});
+            sweetAlert(opts, function () {
                 $dfd.resolve();
             });
         });
@@ -91,9 +94,15 @@
             userOpts
         );
 
+        //return $.Deferred(function ($dfd) {
+        //    sweetAlert(opts).then(function (isConfirmed) {
+        //        callback && callback(isConfirmed);
+        //        $dfd.resolve(isConfirmed);
+        //    });
+        //});
         return $.Deferred(function ($dfd) {
-            sweetAlert(opts).then(function (isConfirmed) {
-                callback && callback(isConfirmed);
+            sweetAlert(opts, function (isConfirmed) {
+                setTimeout(function () { callback && callback(isConfirmed); }, 300);
                 $dfd.resolve(isConfirmed);
             });
         });

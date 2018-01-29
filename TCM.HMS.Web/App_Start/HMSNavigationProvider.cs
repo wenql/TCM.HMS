@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
+using TCM.HMS.Core;
 
 namespace TCM.HMS.Web
 {
@@ -16,18 +17,10 @@ namespace TCM.HMS.Web
             context.Manager.MainMenu
                 .AddItem(
                     new MenuItemDefinition(
-                        "Home",
-                        new LocalizableString("HomePage", HMSConsts.LocalizationSourceName),
-                        url: "",
-                        icon: "fa fa-home"
-                        )
-                ).AddItem(
-                    new MenuItemDefinition(
-                        "About",
-                        new LocalizableString("About", HMSConsts.LocalizationSourceName),
-                        url: "About",
-                        icon: "fa fa-info"
-                        )
+                        "体质辨识",
+                        new LocalizableString("体质辨识", HMSConsts.LocalizationSourceName),
+                        icon: "fa fa-hospital-o"
+                        ).AddItem(new MenuItemDefinition("引导页", new LocalizableString("引导页", HMSConsts.LocalizationSourceName), icon: "fa fa-circle-o", url: "/physique/bootConfig"))
                 );
         }
     }

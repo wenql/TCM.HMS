@@ -1,7 +1,8 @@
-﻿using System.Data.Entity;
-using System.Reflection;
-using Abp.EntityFramework;
+﻿using Abp.EntityFramework;
 using Abp.Modules;
+using System.Data.Entity;
+using System.Reflection;
+using TCM.HMS.Core;
 using TCM.HMS.EntityFramework;
 
 namespace TCM.HMS

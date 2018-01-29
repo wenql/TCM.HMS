@@ -1,11 +1,14 @@
 ﻿using System.Data.Common;
 using Abp.EntityFramework;
+using TCM.HMS.Core.Physique;
+using System.Data.Entity;
 
 namespace TCM.HMS.EntityFramework
 {
     public class HMSDbContext : AbpDbContext
     {
         //TODO: Define an IDbSet for each Entity...
+        public virtual IDbSet<Physique_BootConfig> PhysiqueBoots { get; set; }
 
         //Example:
         //public virtual IDbSet<User> Users { get; set; }

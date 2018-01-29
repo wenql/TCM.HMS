@@ -1,6 +1,7 @@
 ﻿@{
     ViewBag.Title = "中医健康管理";
 }
+@model TCM.HMS.Application.Physique.Dto.BootConfigDto
 <style type="text/css">
     .aui-bar-nav {
         background-color: #ffffff;
@@ -30,41 +31,40 @@
     }
 </style>
 <header class="aui-bar aui-bar-nav">
-    免责申明
+    @Model.Title
 </header>
-
 <section class="aui-content-padded">
     <div class="aui-col-xs-12 aui-margin-b-5">
         <p>
-            尊敬的用户您已加入中医健康管理公众号，为了更好为您提供服务，请填写准确的个人信息，我们将对您的个人信息进行保密，仅进行医院内部提供服务使用。
-        </p>
-    </div>
-    <div class="aui-col-xs-12 aui-margin-b-15">
-        <div class="checkbox">
-            <label><input class="aui-checkbox" type="checkbox" name="checkbox" checked> 同意</label>
-        </div>
-    </div>
-    <div class="aui-col-xs-12">
-        <form>
-            <p>
-                <div onclick="submit();" class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm">下一步</div>
+            @Model.Content
             </p>
-        </form>
-    </div>
-</section>
-@section Scripts{
-    <script src="~/Areas/WeiXin/Scripts/jquery.min.js"></script>
-    <script src="~/Areas/WeiXin/Scripts/aui-toast.js"></script>
-    <script type="text/javascript">
-        function submit() {
-            var $isChecked = $(".aui-checkbox").is(":checked");
-            if (!$isChecked) {
-                new auiToast().fail({
-                    title: "请先同意申明",
-                    duration: 2000
-                });
-                return;
+        </div>
+        <div class="aui-col-xs-12 aui-margin-b-15">
+            <div class="checkbox">
+                <label><input class="aui-checkbox" type="checkbox" name="checkbox" checked> 同意</label>
+            </div>
+        </div>
+        <div class="aui-col-xs-12">
+            <form>
+                <p>
+                    <div onclick="submit();" class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm">下一步</div>
+                </p>
+            </form>
+        </div>
+    </section>
+    @section Scripts{
+        <script src="~/Areas/WeiXin/Scripts/jquery.min.js"></script>
+        <script src="~/Areas/WeiXin/Scripts/aui-toast.js"></script>
+        <script type="text/javascript">
+            function submit() {
+                var $isChecked = $(".aui-checkbox").is(":checked");
+                if (!$isChecked) {
+                    new auiToast().fail({
+                        title: "请先同意申明",
+                        duration: 2000
+                    });
+                    return;
+                }
             }
-        }
-    </script>
-}
+        </script>
+    }

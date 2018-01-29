@@ -3,7 +3,7 @@
 @using Abp.Timing
 @{
     SetAntiForgeryCookie();
-    var title = string.IsNullOrEmpty(ViewBag.Title) ? "中医健康管理系统" : ViewBag.Title + " - ";
+    var title = string.IsNullOrEmpty(ViewBag.Title) ? "home" : ViewBag.Title + " - ";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -13,17 +13,18 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>@title</title>
     @Styles.Render("~/Bundles/Styles/Adminlte")
+    <link href="~/Content/Site.css" rel="stylesheet" />
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="hold-transition skin-green fixed sidebar-mini">
+<body class="hold-transition skin-blue fixed sidebar-mini">
     <div class="wrapper">
         <header class="main-header">
             <a href="/" class="logo">
-                <span class="logo-mini"><b>H</b>MS</span>
-                <span class="logo-lg"><b>中医健康管理系统</b></span>
+                @*<span class="logo-mini"><b>H</b>MS</span>
+                    <span class="logo-lg"><b>中医健康管理系统</b></span>*@
             </a>
             <nav class="navbar navbar-static-top">
                 <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -58,36 +59,36 @@
                                 <img src="~/images/user2-160x160.jpg" class="user-image" alt="User Image">
                                 <span class="hidden-xs">管理员</span>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li class="user-header">
-                                    <img src="~/images/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                    <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
-                                    </p>
-                                </li>
-                                <li class="user-body">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Followers</a>
+                            @*<ul class="dropdown-menu">
+                                    <li class="user-header">
+                                        <img src="~/images/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                        <p>
+                                            Alexander Pierce - Web Developer
+                                            <small>Member since Nov. 2012</small>
+                                        </p>
+                                    </li>
+                                    <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Followers</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Sales</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Friends</a>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Sales</a>
+                                    </li>
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
                                         </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Friends</a>
+                                        <div class="pull-right">
+                                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                    </div>
-                                    <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>*@
                         </li>
                     </ul>
                 </div>
@@ -95,15 +96,6 @@
         </header>
         <aside class="main-sidebar">
             <section class="sidebar">
-                <div class="user-panel">
-                    <div class="pull-left image">
-                        <img src="~/images/user2-160x160.jpg" class="img-circle" alt="User Image">
-                    </div>
-                    <div class="pull-left info">
-                        <p>Alexander Pierce</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                    </div>
-                </div>
                 @Html.Action("SideBarNav", "Layout", new { activeMenu = ViewBag.ActiveMenu })
             </section>
         </aside>
@@ -288,6 +280,7 @@
         <div class="control-sidebar-bg"></div>
     </div>
     @Scripts.Render("~/Bundles/Scripts/Required")
+    @Scripts.Render("~/Bundles/Scripts/Plugin")
     @RenderSection("scripts", required: false)
 </body>
 </html>

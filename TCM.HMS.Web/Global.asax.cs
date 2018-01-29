@@ -2,6 +2,9 @@
 using Abp.Castle.Logging.Log4Net;
 using Abp.Web;
 using Castle.Facilities.Logging;
+using System.Web.Mvc;
+using FluentValidation.Mvc;
+using FluentValidation.Attributes;
 
 namespace TCM.HMS.Web
 {
@@ -12,6 +15,10 @@ namespace TCM.HMS.Web
             AbpBootstrapper.IocManager.IocContainer.AddFacility<LoggingFacility>(
                 f => f.UseAbpLog4Net().WithConfig(Server.MapPath("log4net.config"))
             );
+
+            DataAnnotationsModelValidatorProvider.AddImplicitRequiredAttributeForValueTypes = false;
+            ModelValidatorProviders.Providers.Add(
+                new FluentValidationModelValidatorProvider(new AttributedValidatorFactory()));
 
             base.Application_Start(sender, e);
         }

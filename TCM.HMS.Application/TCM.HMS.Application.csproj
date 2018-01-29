@@ -7,7 +7,7 @@
     <ProjectGuid>{EDF5D964-4C0F-4F19-B674-58A38A5E5401}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TCM.HMS</RootNamespace>
+    <RootNamespace>TCM.HMS.Application</RootNamespace>
     <AssemblyName>TCM.HMS.Application</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -52,6 +52,9 @@
     </Reference>
     <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.7.4.0\lib\net45\FluentValidation.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
       <HintPath>..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
@@ -181,6 +184,9 @@
   <ItemGroup>
     <Compile Include="HMSApplicationModule.cs" />
     <Compile Include="HMSAppServiceBase.cs" />
+    <Compile Include="Physique\Dto\BootConfigDto.cs" />
+    <Compile Include="Physique\IPhysiqueAppService.cs" />
+    <Compile Include="Physique\PhysiqueAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

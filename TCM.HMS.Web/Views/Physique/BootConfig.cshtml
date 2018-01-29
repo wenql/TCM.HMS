@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "体质辨识";
+}
+@model TCM.HMS.Application.Physique.Dto.BootConfigDto
+<section class="content-header">
+    <h1>
+        引导页配置
+        <small>微信公众号体质辨识</small>
+    </h1>
+</section>
+<section class="content">
+    <div class="box box-primary">
+        @using (Html.BeginForm("SubmitConfig", "Physique", FormMethod.Post, new { @id = "configForm" }))
+        {
+            @Html.HiddenFor(x => x.Id)
+            <div class="box-body">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Title)
+                    @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "请输入标题" })
+                    @Html.ValidationMessageFor(x => x.Title)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Content)
+                    @Html.TextAreaFor(x => x.Content, new { @rows = "3", @class = "form-control", @placeholder = "请输入申明内容" })
+                    @Html.ValidationMessageFor(x => x.Content)
+                </div>
+            </div>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">提&nbsp;&nbsp;交</button>
+            </div>
+        }
+    </div>
+</section>
+@section scripts{
+    <script type="text/javascript">
+        (function () {
+            $(function () {
+                var $form = $('#configForm');
+                $form.submit(function (e) {
+                    e.preventDefault();
+                    if (!$form.valid()) {
+                        return;
+                    }
+                    abp.ui.setBusy(
+                        $('#configForm'),
+                        abp.ajax({
+                            contentType: 'application/x-www-form-urlencoded',
+                            url: $form.attr('action'),
+                            data: $form.serialize()
+                        }).done(function (data) {
+                            abp.notify.success('提交成功！');
+                        })
+                    );
+                });
+            });
+        })();
+    </script>
+}

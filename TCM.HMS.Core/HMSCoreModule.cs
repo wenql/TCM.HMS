@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Abp.Modules;
 
-namespace TCM.HMS
+namespace TCM.HMS.Core
 {
     public class HMSCoreModule : AbpModule
     {

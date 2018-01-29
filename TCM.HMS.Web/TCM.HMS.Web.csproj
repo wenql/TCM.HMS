@@ -93,6 +93,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.7.4.0\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.Mvc5.7.4.0\lib\net45\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
       <HintPath>..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
     </Reference>
@@ -412,9 +418,12 @@
     <Content Include="Content\skins\skin-yellow.min.css" />
     <Content Include="Content\skins\_all-skins.css" />
     <Content Include="Content\skins\_all-skins.min.css" />
+    <Content Include="Content\sweetalert.css" />
+    <Content Include="Content\toastr.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\bg.png" />
     <Content Include="images\user2-160x160.jpg" />
     <Content Include="log4net.config" />
     <Content Include="Abp\Framework\styles\abp.mixings.less" />
@@ -424,8 +433,24 @@
     <Content Include="Scripts\adminlte.min.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\fastclick.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\jquery.spin.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modules\default-params.js" />
+    <Content Include="Scripts\modules\handle-click.js" />
+    <Content Include="Scripts\modules\handle-dom.js" />
+    <Content Include="Scripts\modules\handle-key.js" />
+    <Content Include="Scripts\modules\handle-swal-dom.js" />
+    <Content Include="Scripts\modules\injected-html.js" />
+    <Content Include="Scripts\modules\set-params.js" />
+    <Content Include="Scripts\modules\utils.js" />
+    <Content Include="Scripts\spin.min.js" />
+    <Content Include="Scripts\sweetalert-dev.js" />
+    <Content Include="Scripts\toastr.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -443,6 +468,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\HMSControllerBase.cs" />
+    <Compile Include="Controllers\PhysiqueController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -466,6 +492,7 @@
     <Content Include="Areas\WeiXin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\WeiXin\Views\SignHealth\Index.cshtml" />
     <Content Include="Areas\WeiXin\Content\aui-iconfont.ttf" />
+    <Content Include="Views\Physique\BootConfig.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

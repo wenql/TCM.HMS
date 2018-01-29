@@ -1,4 +1,4 @@
-﻿namespace TCM.HMS
+﻿namespace TCM.HMS.Core
 {
     public class HMSConsts
     {

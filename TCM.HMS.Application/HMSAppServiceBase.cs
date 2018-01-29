@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using TCM.HMS.Core;
 
 namespace TCM.HMS
 {
