@@ -1,10 +1,6 @@
 ﻿using Abp.UI;
 using Abp.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 using TCM.HMS.Application.Physique;
 using TCM.HMS.Application.Physique.Dto;
@@ -20,17 +16,13 @@ namespace TCM.HMS.Web.Controllers
             this._iPhysiqueAppService = iPhysiqueAppService;
         }
 
-        // GET: Physique
+        // GET: Config
         public ActionResult BootConfig()
         {
             return View(this._iPhysiqueAppService.GetBootConfig());
         }
 
-        /// <summary>
-        /// 提交
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
+        // POST: Config
         [HttpPost]
         public async Task<JsonResult> SubmitConfig(BootConfigDto model)
         {
@@ -40,6 +32,12 @@ namespace TCM.HMS.Web.Controllers
             }
             this._iPhysiqueAppService.SaveConfig(model);
             return Json(new AjaxResponse { });
+        }
+
+        // GET:Categories
+        public ActionResult Categories()
+        {
+            return View();
         }
     }
 }

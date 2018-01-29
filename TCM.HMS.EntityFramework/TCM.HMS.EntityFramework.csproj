@@ -194,6 +194,10 @@
     <Compile Include="Migrations\201801290304230_InitialCreate1.Designer.cs">
       <DependentUpon>201801290304230_InitialCreate1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801291004496_InitialCreate2.cs" />
+    <Compile Include="Migrations\201801291004496_InitialCreate2.Designer.cs">
+      <DependentUpon>201801291004496_InitialCreate2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="HMSDataModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -214,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801290304230_InitialCreate1.resx">
       <DependentUpon>201801290304230_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801291004496_InitialCreate2.resx">
+      <DependentUpon>201801291004496_InitialCreate2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

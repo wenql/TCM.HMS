@@ -10,6 +10,10 @@ namespace TCM.HMS.EntityFramework
         //TODO: Define an IDbSet for each Entity...
         public virtual IDbSet<Physique_BootConfig> PhysiqueBoots { get; set; }
 
+        public virtual IDbSet<Physique_Subject> Subjects { get; set; }
+
+        public virtual IDbSet<Physique_SubjectOption> SubjectOptions { get; set; }
+
         //Example:
         //public virtual IDbSet<User> Users { get; set; }
 

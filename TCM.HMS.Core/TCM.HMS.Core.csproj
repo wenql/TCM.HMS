@@ -151,6 +151,10 @@
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -169,9 +173,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\EnumHelper.cs" />
     <Compile Include="Physique\Physique_BootConfig.cs" />
     <Compile Include="HMSConsts.cs" />
     <Compile Include="HMSCoreModule.cs" />
+    <Compile Include="Physique\Physique_Subject.cs" />
+    <Compile Include="Physique\Physique_SubjectOption.cs" />
+    <Compile Include="Physique\SubjectCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
