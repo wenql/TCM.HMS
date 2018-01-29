@@ -1,4 +1,5 @@
-﻿using Abp.Application.Services;
+﻿using System.Collections.Generic;
+using Abp.Application.Services;
 using System.Threading.Tasks;
 using TCM.HMS.Application.Physique.Dto;
 
@@ -17,5 +18,39 @@ namespace TCM.HMS.Application.Physique
         /// </summary>
         /// <param name="model"></param>
         void SaveConfig(BootConfigDto model);
+
+        /// <summary>
+        /// 获取判定表
+        /// </summary>
+        /// <param name="categoryId"></param>
+        /// <returns></returns>
+        List<SubjectListDto> GetSubjects(int categoryId);
+
+        /// <summary>
+        /// 获取判定表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        SubjectDto GetSubject(int id);
+
+        /// <summary>
+        /// 保存判定表
+        /// </summary>
+        /// <param name="model"></param>
+        void SaveSubject(SubjectDto model);
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="id"></param>
+        void DeleteSubject(int id);
+
+        /// <summary>
+        /// 获取医生分析
+        /// </summary>
+        /// <returns></returns>
+        DocumentDto GetDocument(int categoryId);
+
+        void SaveDocument(DocumentDto model);
     }
 }

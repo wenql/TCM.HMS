@@ -1,0 +1,108 @@
+﻿@{
+    ViewBag.Title = "体质辨识";
+}
+@model TCM.HMS.Application.Physique.Dto.SubjectDto
+<section class="content-header clearfix">
+    <h1 class="pull-left">
+        新增/编辑判定
+        <small>
+            <i class="fa fa-arrow-circle-left"></i>
+            <a href="/physique/Subject?categoryId=@Model.CategoryId">@Model.CategoryName</a>
+        </small>
+    </h1>
+</section>
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            @using (Html.BeginForm("SubmitSubject", "Physique", FormMethod.Post, new { @id = "subjectForm" }))
+            {
+                @Html.HiddenFor(x => x.Id)
+                @Html.HiddenFor(x => x.CategoryId)
+                <div class="box-body">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Title)
+                        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "请输入标题" })
+                        @Html.ValidationMessageFor(x => x.Title)
+                    </div>
+                    <div class="form-group">
+                        <label>分数</label>
+                        <table class="table table-hover table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th style="width: 110px;">没有或根本不</th>
+                                    <th style="width: 110px;">很少或有一点</th>
+                                    <th style="width: 110px;">有时或有些</th>
+                                    <th style="width: 110px;">经常或相当</th>
+                                    <th style="width: 110px;">总是或非常</th>
+                                </tr>
+                            </tbody>
+                            <tbody style="border: none;">
+                                <tr>
+                                    <th style="width: 110px;">
+                                        @Html.TextBoxFor(x => x.Score1, new { @class = "form-control", @placeholder = "请输入分数" })
+                                        @Html.ValidationMessageFor(x => x.Score1)
+                                    </th>
+                                    <th style="width: 110px;">
+                                        @Html.TextBoxFor(x => x.Score2, new { @class = "form-control", @placeholder = "请输入分数" })
+                                        @Html.ValidationMessageFor(x => x.Score2)
+                                    </th>
+                                    <th style="width: 110px;">
+                                        @Html.TextBoxFor(x => x.Score3, new { @class = "form-control", @placeholder = "请输入分数" })
+                                        @Html.ValidationMessageFor(x => x.Score3)
+                                    </th>
+                                    <th style="width: 110px;">
+                                        @Html.TextBoxFor(x => x.Score4, new { @class = "form-control", @placeholder = "请输入分数" })
+                                        @Html.ValidationMessageFor(x => x.Score4)
+                                    </th>
+                                    <th style="width: 110px;">
+                                        @Html.TextBoxFor(x => x.Score5, new { @class = "form-control", @placeholder = "请输入分数" })
+                                        @Html.ValidationMessageFor(x => x.Score5)
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">提&nbsp;&nbsp;交</button>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+@section scripts{
+    <script type="text/javascript">
+        (function () {
+            $(function () {
+                var $form = $('#subjectForm');
+                $form.submit(function (e) {
+                    e.preventDefault();
+                    if (!$form.valid()) {
+                        return;
+                    }
+                        abp.ui.setBusy(
+                            $('#subjectForm'),
+                            abp.ajax({
+                                contentType: 'application/x-www-form-urlencoded',
+                                url: $form.attr('action'),
+                                data: $form.serialize()
+                            }).done(function(data) {
+                                abp.notify.success('提交成功！');
+                                var id = '@Model.Id';
+
+                                setTimeout(function() {
+                                        if (id > 0) {
+                                            location.href = '/physique/Subject?categoryId=@Model.CategoryId';
+                                        } else {
+                                            location.reload();
+                                        }
+                                    },
+                                    500);
+
+                            })
+                    );
+                });
+            });
+        })();
+    </script>
+}

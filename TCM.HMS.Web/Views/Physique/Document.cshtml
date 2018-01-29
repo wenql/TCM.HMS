@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "体质辨识";
+}
+@model TCM.HMS.Application.Physique.Dto.DocumentDto
+<section class="content-header">
+    <h1>
+        体质描述，建议分析
+        <small>
+            <i class="fa fa-arrow-circle-left"></i>
+            <a href="/physique/categories">@Model.CategoryName</a>
+        </small>
+    </h1>
+</section>
+<section class="content">
+    <div class="box box-primary">
+        @using (Html.BeginForm("SubmitDocument", "Physique", FormMethod.Post, new { @id = "configForm" }))
+        {
+            @Html.HiddenFor(x => x.Id)
+            @Html.HiddenFor(x => x.CategoryId)
+            <div class="box-header with-border">
+                <h3 class="box-title">体质描述</h3>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Zttz)
+                    @Html.TextBoxFor(x => x.Zttz, new { @class = "form-control", @placeholder = "请输入总体特征" })
+                    @Html.ValidationMessageFor(x => x.Zttz)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Xttz)
+                    @Html.TextBoxFor(x => x.Xttz, new { @class = "form-control", @placeholder = "请输入形体特征" })
+                    @Html.ValidationMessageFor(x => x.Xttz)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Cjbx)
+                    @Html.TextBoxFor(x => x.Cjbx, new { @class = "form-control", @placeholder = "请输入常见表现" })
+                    @Html.ValidationMessageFor(x => x.Cjbx)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Xltz)
+                    @Html.TextBoxFor(x => x.Xltz, new { @class = "form-control", @placeholder = "请输入心理特征" })
+                    @Html.ValidationMessageFor(x => x.Xltz)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Fbqx)
+                    @Html.TextBoxFor(x => x.Fbqx, new { @class = "form-control", @placeholder = "请输入发病倾向" })
+                    @Html.ValidationMessageFor(x => x.Fbqx)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Hjsy)
+                    @Html.TextBoxFor(x => x.Hjsy, new { @class = "form-control", @placeholder = "请输入对外界环境适应能力" })
+                    @Html.ValidationMessageFor(x => x.Hjsy)
+                </div>
+            </div>
+            <div class="box-header with-border">
+                <h3 class="box-title">建议分析</h3>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Ydty)
+                    @Html.TextAreaFor(x => x.Ydty, new { @rows = "3", @class = "form-control", @placeholder = "请输入运动调养" })
+                    @Html.ValidationMessageFor(x => x.Ydty)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Ywty)
+                    @Html.TextAreaFor(x => x.Ywty, new { @rows = "3", @class = "form-control", @placeholder = "请输入药物调养" })
+                    @Html.ValidationMessageFor(x => x.Ywty)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Tyff)
+                    @Html.TextAreaFor(x => x.Tyff, new { @rows = "3", @class = "form-control", @placeholder = "请输入调养方法" })
+                    @Html.ValidationMessageFor(x => x.Tyff)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Jksp)
+                    @Html.TextAreaFor(x => x.Jksp, new { @rows = "6", @class = "form-control", @placeholder = "请输入健康食谱" })
+                    @Html.ValidationMessageFor(x => x.Jksp)
+                </div>
+            </div>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">提&nbsp;&nbsp;交</button>
+            </div>
+        }
+    </div>
+</section>
+@section scripts{
+    <script type="text/javascript">
+        (function () {
+            $(function () {
+                var $form = $('#configForm');
+                $form.submit(function (e) {
+                    e.preventDefault();
+                    if (!$form.valid()) {
+                        return;
+                    }
+                    abp.ui.setBusy(
+                        $('#configForm'),
+                        abp.ajax({
+                            contentType: 'application/x-www-form-urlencoded',
+                            url: $form.attr('action'),
+                            data: $form.serialize()
+                        }).done(function (data) {
+                            abp.notify.success('提交成功！');
+                            setTimeout(function () {
+                                location.href ='/physique/categories';
+                            }, 500);
+                        })
+                    );
+                });
+            });
+        })();
+    </script>
+}

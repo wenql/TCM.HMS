@@ -1,11 +1,11 @@
-﻿using Abp.AutoMapper;
+﻿using System.Reflection;
+using Abp.AutoMapper;
 using Abp.Modules;
-using System.Reflection;
 using TCM.HMS.Application.Physique.Dto;
 using TCM.HMS.Core;
 using TCM.HMS.Core.Physique;
 
-namespace TCM.HMS
+namespace TCM.HMS.Application
 {
     [DependsOn(typeof(HMSCoreModule), typeof(AbpAutoMapperModule))]
     public class HMSApplicationModule : AbpModule
@@ -17,6 +17,11 @@ namespace TCM.HMS
             {
                 cfg.CreateMap<BootConfigDto, Physique_BootConfig>();
                 cfg.CreateMap<Physique_BootConfig, BootConfigDto>();
+                cfg.CreateMap<Physique_Subject, SubjectDto>();
+                cfg.CreateMap<SubjectDto, Physique_Subject>();
+                cfg.CreateMap<Physique_Subject, SubjectListDto>();
+                cfg.CreateMap<DocumentDto, Physique_Document>();
+                cfg.CreateMap<Physique_Document, DocumentDto>();
             });
         }
     }

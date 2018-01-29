@@ -174,11 +174,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper\EnumHelper.cs" />
+    <Compile Include="Physique\Physique_Document.cs" />
     <Compile Include="Physique\Physique_BootConfig.cs" />
     <Compile Include="HMSConsts.cs" />
     <Compile Include="HMSCoreModule.cs" />
     <Compile Include="Physique\Physique_Subject.cs" />
-    <Compile Include="Physique\Physique_SubjectOption.cs" />
     <Compile Include="Physique\SubjectCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

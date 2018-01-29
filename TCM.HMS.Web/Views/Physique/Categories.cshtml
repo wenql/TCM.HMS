@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "体质辨识";
+}
+@model List<SelectListItem>
+<section class="content-header">
+    <h1>
+        体质分类
+        <small>微信公众号体质辨识</small>
+    </h1>
+</section>
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-aqua">@item.Text[0]</span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">@item.Text</span>
+                                <p style="margin: 0 !important;">
+                                    <button type="button" class="btn bg-maroon btn-flat margin" onclick="location.href = '/physique/subject?categoryId=' + @item.Value;">判定表</button>
+                                    <button type="button" class="btn bg-purple btn-flat margin" onclick="location.href = '/physique/document?categoryId=' + @item.Value;">体质描述，建议分析</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

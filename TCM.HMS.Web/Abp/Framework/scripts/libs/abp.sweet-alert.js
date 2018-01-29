@@ -26,8 +26,9 @@
             },
             confirm: {
                 icon: 'warning',
+                showCancelButton: true, 
                 title: 'Are you sure?',
-                buttons: ['Cancel', 'Yes']
+                buttons: ['取消', '确认']
             }
         }
     };
@@ -110,7 +111,7 @@
 
     abp.event.on('abp.dynamicScriptsInitialized', function () {
         abp.libs.sweetAlert.config.confirm.title = abp.localization.abpWeb('AreYouSure');
-        abp.libs.sweetAlert.config.confirm.buttons = [abp.localization.abpWeb('Cancel'), abp.localization.abpWeb('Yes')];
+        abp.libs.sweetAlert.config.confirm.buttons = ['取消', '确认'];
     });
 
 })(jQuery);

@@ -1,4 +1,5 @@
-﻿using Abp.Domain.Entities;
+﻿using System.Collections.Generic;
+using Abp.Domain.Entities;
 
 namespace TCM.HMS.Core.Physique
 {
@@ -13,5 +14,10 @@ namespace TCM.HMS.Core.Physique
         /// 分类名称
         /// </summary>
         public string Title { get; set; }
+
+        /// <summary>
+        /// 分数集合
+        /// </summary>
+        public string Scores { get; set; }
     }
 }

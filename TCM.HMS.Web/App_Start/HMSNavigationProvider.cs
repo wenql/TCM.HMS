@@ -16,9 +16,9 @@ namespace TCM.HMS.Web
         {
             context.Manager.MainMenu
                 .AddItem(
-                    new MenuItemDefinition("体质辨识", new LocalizableString("体质辨识", HMSConsts.LocalizationSourceName), icon: "fa fa-hospital-o")
-                        .AddItem(new MenuItemDefinition("引导页", new LocalizableString("引导页", HMSConsts.LocalizationSourceName), icon: "fa fa-circle-o", url: "/physique/bootConfig"))
-                        .AddItem(new MenuItemDefinition("体质分类", new LocalizableString("体质分类", HMSConsts.LocalizationSourceName), icon: "fa fa-circle-o", url: "/physique/categories"))
+                    new MenuItemDefinition("Physique", new LocalizableString("体质辨识", HMSConsts.LocalizationSourceName), icon: "fa fa-hospital-o")
+                        .AddItem(new MenuItemDefinition("BootConfig", new LocalizableString("引导页", HMSConsts.LocalizationSourceName), icon: "fa fa-circle-o", url: "/physique/bootConfig"))
+                        .AddItem(new MenuItemDefinition("Categories", new LocalizableString("体质分类", HMSConsts.LocalizationSourceName), icon: "fa fa-circle-o", url: "/physique/categories"))
                 );
         }
     }

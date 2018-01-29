@@ -12,7 +12,7 @@ namespace TCM.HMS.EntityFramework
 
         public virtual IDbSet<Physique_Subject> Subjects { get; set; }
 
-        public virtual IDbSet<Physique_SubjectOption> SubjectOptions { get; set; }
+        public virtual IDbSet<Physique_Document> Documents { get; set; }
 
         //Example:
         //public virtual IDbSet<User> Users { get; set; }

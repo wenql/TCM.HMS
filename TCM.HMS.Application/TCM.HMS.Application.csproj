@@ -185,6 +185,10 @@
     <Compile Include="HMSApplicationModule.cs" />
     <Compile Include="HMSAppServiceBase.cs" />
     <Compile Include="Physique\Dto\BootConfigDto.cs" />
+    <Compile Include="Physique\Dto\DocumentDto.cs" />
+    <Compile Include="Physique\Dto\PhysiqueSubjects.cs" />
+    <Compile Include="Physique\Dto\SubjectDto.cs" />
+    <Compile Include="Physique\Dto\SubjectListDto.cs" />
     <Compile Include="Physique\IPhysiqueAppService.cs" />
     <Compile Include="Physique\PhysiqueAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

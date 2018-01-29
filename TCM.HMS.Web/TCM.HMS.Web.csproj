@@ -493,6 +493,10 @@
     <Content Include="Areas\WeiXin\Views\SignHealth\Index.cshtml" />
     <Content Include="Areas\WeiXin\Content\aui-iconfont.ttf" />
     <Content Include="Views\Physique\BootConfig.cshtml" />
+    <Content Include="Views\Physique\Categories.cshtml" />
+    <Content Include="Views\Physique\Subject.cshtml" />
+    <Content Include="Views\Physique\SubjectForm.cshtml" />
+    <Content Include="Views\Physique\Document.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
