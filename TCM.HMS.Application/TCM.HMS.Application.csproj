@@ -192,6 +192,9 @@
     <Compile Include="Physique\IPhysiqueAppService.cs" />
     <Compile Include="Physique\PhysiqueAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Dto\UserDto.cs" />
+    <Compile Include="User\IUserAppService.cs" />
+    <Compile Include="User\UserAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

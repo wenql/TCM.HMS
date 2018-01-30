@@ -53,7 +53,7 @@
                 });
                 return;
             }
-            location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx25750ab6611b4901&redirect_uri=http://testweixinapi.rongdaozx.com/SignHealth/SignUp&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect';
+            location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx25750ab6611b4901&redirect_uri=' + encodeURIComponent('http://testweixinapi.rongdaozx.com/weixin/SignHealth/SignUp') + '&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect';
         }
     </script>
 }

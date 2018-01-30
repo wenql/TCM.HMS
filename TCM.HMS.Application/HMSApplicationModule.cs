@@ -2,6 +2,7 @@
 using Abp.AutoMapper;
 using Abp.Modules;
 using TCM.HMS.Application.Physique.Dto;
+using TCM.HMS.Application.User.Dto;
 using TCM.HMS.Core;
 using TCM.HMS.Core.Physique;
 
@@ -22,6 +23,9 @@ namespace TCM.HMS.Application
                 cfg.CreateMap<Physique_Subject, SubjectListDto>();
                 cfg.CreateMap<DocumentDto, Physique_Document>();
                 cfg.CreateMap<Physique_Document, DocumentDto>();
+
+                cfg.CreateMap<Core.User.User, UserDto>();
+                cfg.CreateMap<UserDto, Core.User.User>().ForMember(x => x.CreateDate, opt => opt.Ignore());
             });
         }
     }

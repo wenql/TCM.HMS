@@ -2,6 +2,7 @@
 using Abp.EntityFramework;
 using TCM.HMS.Core.Physique;
 using System.Data.Entity;
+using TCM.HMS.Core.User;
 
 namespace TCM.HMS.EntityFramework
 {
@@ -13,6 +14,8 @@ namespace TCM.HMS.EntityFramework
         public virtual IDbSet<Physique_Subject> Subjects { get; set; }
 
         public virtual IDbSet<Physique_Document> Documents { get; set; }
+
+        public virtual IDbSet<User> Users { get; set; }
 
         //Example:
         //public virtual IDbSet<User> Users { get; set; }

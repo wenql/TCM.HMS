@@ -16,6 +16,7 @@
     .aui-list-item-input label:last-child {
         margin-left: 0.75rem;
     }
+
     p .aui-btn:last-child {
         background-color: #03a9f4 !important;
         border-color: #03a9f4 !important;
@@ -41,7 +42,7 @@
                             姓名
                         </div>
                         <div class="aui-list-item-input">
-                            <input type="text" placeholder="请输入姓名" />
+                            <input type="text" id="username" placeholder="请输入姓名" />
                         </div>
                         <div class="aui-list-item-label-icon">
                         </div>
@@ -53,8 +54,8 @@
                             性别
                         </div>
                         <div class="aui-list-item-input">
-                            <label><input class="aui-radio" type="radio" name="sex" checked> 男</label>
-                            <label><input class="aui-radio" type="radio" name="sex"> 女</label>
+                            <label><input class="aui-radio" value="1" type="radio" name="sex" checked> 男</label>
+                            <label><input class="aui-radio" value="0" type="radio" name="sex"> 女</label>
                         </div>
                         <div class="aui-list-item-label-icon">
                         </div>
@@ -79,7 +80,7 @@
                             手机号
                         </div>
                         <div class="aui-list-item-input">
-                            <input type="text" placeholder="请输入手机号" />
+                            <input type="text" id="mobile" placeholder="请输入手机号" />
                         </div>
                         <div class="aui-list-item-label-icon">
                         </div>
@@ -91,7 +92,7 @@
                             身份证
                         </div>
                         <div class="aui-list-item-input">
-                            <input type="text" placeholder="请输入身份证" />
+                            <input type="text" id="idCard" placeholder="请输入身份证" />
                         </div>
                         <div class="aui-list-item-label-icon">
                         </div>
@@ -101,7 +102,6 @@
             <div class="aui-col-xs-12 aui-padded-15">
                 <p>
                     <div onclick="submit();" class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm">进入体质辨识</div>
-                    <div onclick="submit();" class="aui-btn aui-btn-block aui-btn-sm aui-margin-t-10">查询辨识报告</div>
                 </p>
             </div>
         </div>
@@ -111,8 +111,9 @@
     <script src="~/Areas/WeiXin/Scripts/jquery.min.js"></script>
     <script src="~/Areas/WeiXin/Scripts/mobiscroll_date.js" charset="gb2312"></script>
     <script src="~/Areas/WeiXin/Scripts/mobiscroll.js"></script>
+    <script src="~/Areas/WeiXin/Scripts/aui-toast.js"></script>
     <script type="text/javascript">
-        $(function () {
+        $(function() {
             var currYear = (new Date()).getFullYear();
             var opt = {};
             opt.date = { preset: 'date' };
@@ -130,7 +131,85 @@
             };
 
             $("#birthDate").mobiscroll($.extend(opt['date'], opt['default']));
-
         });
+
+        var submit = function() {
+            var userName = $("#username").val();
+            var sex = $("input[name='sex']:checked").val();
+            var birthDate = $("#birthDate").val();
+            var mobile = $("#mobile").val();
+            var idCard = $("#idCard").val();
+            if (userName == "") {
+                new auiToast().fail({
+                    title: "请输入您的姓名",
+                    duration: 2000
+                });
+                $("#username").focus();
+                return;
+            }
+            if (birthDate == "") {
+                new auiToast().fail({
+                    title: "请选择您的出生日期",
+                    duration: 2000
+                });
+                return;
+            }
+            if (mobile == "") {
+                new auiToast().fail({
+                    title: "请输入您的手机号",
+                    duration: 2000
+                });
+                $("#mobile").focus();
+                return;
+            }
+            if (idCard == "") {
+                new auiToast().fail({
+                    title: "请输入您的身份证号",
+                    duration: 2000
+                });
+                $("#idCard").focus();
+                return;
+            }
+            var postData = {
+                Id: '@ViewBag.UserId',
+                UserName: userName,
+                Sex: sex,
+                BirthDay: birthDate,
+                Mobile: mobile,
+                IdCard: idCard
+            };
+            var toast = new auiToast();
+            toast.loading({
+                    title: "提交中...",
+                    duration: 2000
+                },
+                function(ret) {
+                    $.ajax({
+                        url: '/Weixin/SignHealth/Accept',
+                        type: "POST",
+                        data: JSON.stringify(postData),
+                        contentType: "application/json",
+                        async: true,
+                        success: function (data) {
+                            toast.hide();
+                            if (data.result.success) {
+                                setTimeout(function() {
+                                        location.href = '/Weixin/SignHealth/?userId=' + data.result.userId;
+                                    },
+                                    1000);
+                            } else {
+                                new auiToast().fail({
+                                    title: "提交失败",
+                                    duration: 2000
+                                });
+                            }
+                        },
+                        error: function (data) {
+                            toast.hide();
+                            alert("error:" + JSON.stringify(data));
+                        }
+                    });
+                });
+        }
     </script>
 }

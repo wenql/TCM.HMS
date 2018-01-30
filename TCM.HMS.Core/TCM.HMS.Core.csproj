@@ -181,6 +181,7 @@
     <Compile Include="Physique\Physique_Subject.cs" />
     <Compile Include="Physique\SubjectCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
