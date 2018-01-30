@@ -369,6 +369,8 @@
     <Content Include="Areas\WeiXin\Content\aui-skin.css" />
     <Content Include="Areas\WeiXin\Content\aui-slide.css" />
     <Content Include="Areas\WeiXin\Content\aui.css" />
+    <Content Include="Areas\WeiXin\Content\mobiscroll.css" />
+    <Content Include="Areas\WeiXin\Content\mobiscroll_date.css" />
     <Content Include="Areas\WeiXin\Images\bg.png" />
     <Content Include="Areas\WeiXin\Scripts\api.js" />
     <Content Include="Areas\WeiXin\Scripts\aui-actionsheet.js" />
@@ -388,6 +390,8 @@
     <Content Include="Areas\WeiXin\Scripts\aui-tab.js" />
     <Content Include="Areas\WeiXin\Scripts\aui-toast.js" />
     <Content Include="Areas\WeiXin\Scripts\jquery.min.js" />
+    <Content Include="Areas\WeiXin\Scripts\mobiscroll.js" />
+    <Content Include="Areas\WeiXin\Scripts\mobiscroll_date.js" />
     <Content Include="Content\AdminLTE.min.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.min.css" />
@@ -423,6 +427,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Areas\WeiXin\Images\banner.jpg" />
     <Content Include="images\bg.png" />
     <Content Include="images\user2-160x160.jpg" />
     <Content Include="log4net.config" />
@@ -497,6 +502,8 @@
     <Content Include="Views\Physique\Subject.cshtml" />
     <Content Include="Views\Physique\SubjectForm.cshtml" />
     <Content Include="Views\Physique\Document.cshtml" />
+    <Content Include="Areas\WeiXin\Views\SignHealth\SignUp.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

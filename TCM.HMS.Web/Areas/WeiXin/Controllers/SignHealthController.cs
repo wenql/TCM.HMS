@@ -22,6 +22,11 @@ namespace TCM.HMS.Web.Areas.WeiXin.Controllers
             return View(this._iPhysiqueAppService.GetBootConfig());
         }
 
+        public ActionResult SignUp()
+        {
+            return View();
+        }
+
         /// <summary>
         /// Accept agreement
         /// </summary>
