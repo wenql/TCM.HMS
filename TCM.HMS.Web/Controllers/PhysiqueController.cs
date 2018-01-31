@@ -7,6 +7,7 @@ using TCM.HMS.Application.Physique;
 using TCM.HMS.Application.Physique.Dto;
 using TCM.HMS.Core.Helper;
 using TCM.HMS.Core.Physique;
+using System.Collections.Generic;
 
 namespace TCM.HMS.Web.Controllers
 {
@@ -82,6 +83,11 @@ namespace TCM.HMS.Web.Controllers
                     throw new UserFriendlyException("体质分类不存在");
                 }
             }
+            var list = new List<SelectListItem>();
+            list.Add(new SelectListItem() { Text = "不限", Value = "2", Selected = false });
+            list.Add(new SelectListItem() { Text = "男性", Value = "1", Selected = false });
+            list.Add(new SelectListItem() { Text = "女性", Value = "0", Selected = false });
+            ViewBag.list = list;
             return View(model);
         }
 

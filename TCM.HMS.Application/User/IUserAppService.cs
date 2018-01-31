@@ -10,10 +10,10 @@ namespace TCM.HMS.Application.User
 {
     public interface IUserAppService : IApplicationService
     {
-        UserDto GetUser(string openId);
+        Core.User.User GetUser(string openId);
 
-        UserDto GetUser(int id);
+        Core.User.User GetUser(int id);
 
-        int SaveUserInfo(UserDto model);
+        int SaveUserInfo(Core.User.User model);
     }
 }

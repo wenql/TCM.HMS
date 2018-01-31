@@ -29,6 +29,12 @@ namespace TCM.HMS.Application.Physique
         /// <summary>
         /// 获取判定表
         /// </summary>
+        /// <returns></returns>
+        List<SubjectListDto> GetSubjects();
+
+        /// <summary>
+        /// 获取判定表
+        /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         SubjectDto GetSubject(int id);

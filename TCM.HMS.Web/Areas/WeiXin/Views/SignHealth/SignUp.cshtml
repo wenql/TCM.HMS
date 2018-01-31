@@ -7,12 +7,6 @@
         line-height: 20px;
     }
 
-    .aui-list-item {
-        border-bottom: 1px solid #dddddd !important;
-        padding-left: 0.75rem !important;
-        padding-right: 0.75rem !important;
-    }
-
     .aui-list-item-input label:last-child {
         margin-left: 0.75rem;
     }
@@ -194,7 +188,7 @@
                             toast.hide();
                             if (data.result.success) {
                                 setTimeout(function() {
-                                        location.href = '/Weixin/SignHealth/?userId=' + data.result.userId;
+                                    location.href = '/Weixin/SignHealth/Exam?userId=' + data.result.userId;
                                     },
                                     1000);
                             } else {

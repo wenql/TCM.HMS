@@ -29,13 +29,13 @@
     </div>
     <div class="aui-col-xs-12 aui-margin-b-15">
         <div class="checkbox">
-            <label><input class="aui-checkbox" type="checkbox" name="checkbox" checked> 同意</label>
+            <label><input class="aui-checkbox" type="checkbox" name="checkbox" id="myCheck" checked> 同意</label>
         </div>
     </div>
     <div class="aui-col-xs-12">
         <form>
             <p>
-                <div onclick="submit();" class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm">下一步</div>
+                <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx25750ab6611b4901&redirect_uri=http://testweixinapi.rongdaozx.com/weixin/SignHealth/SignUp&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect" class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm" id="btnNext">下一步</a>
             </p>
         </form>
     </div>
@@ -44,16 +44,15 @@
     <script src="~/Areas/WeiXin/Scripts/jquery.min.js"></script>
     <script src="~/Areas/WeiXin/Scripts/aui-toast.js"></script>
     <script type="text/javascript">
-        function submit() {
-            var $isChecked = $(".aui-checkbox").is(":checked");
-            if (!$isChecked) {
-                new auiToast().fail({
-                    title: "请先同意申明",
-                    duration: 2000
-                });
-                return;
-            }
-            location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx25750ab6611b4901&redirect_uri=' + encodeURIComponent('http://testweixinapi.rongdaozx.com/weixin/SignHealth/SignUp') + '&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect';
-        }
+        $(function () {
+            $('#myCheck').change(function () {
+                if ($(this).get(0).checked) {
+                    $('#btnNext').attr("href", 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx25750ab6611b4901&redirect_uri=http://testweixinapi.rongdaozx.com/weixin/SignHealth/SignUp&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect');
+                }
+                else {
+                    $('#btnNext').attr("href", 'javascript:new auiToast().fail({title: "请先同意申明",duration: 2000})');
+                }
+            });
+        });
     </script>
 }

@@ -19,18 +19,18 @@ namespace TCM.HMS.Application.User
             this._userRepository = userRepository;
         }
 
-        public UserDto GetUser(string openId)
+        public Core.User.User GetUser(string openId)
         {
-            return Mapper.Map<UserDto>(
-                (from c in this._userRepository.GetAll() select c).FirstOrDefault(x => x.OpenId == openId));
+            return 
+                (from c in this._userRepository.GetAll() select c).FirstOrDefault(x => x.OpenId == openId);
         }
 
-        public UserDto GetUser(int id)
+        public Core.User.User GetUser(int id)
         {
-            return Mapper.Map<UserDto>(this._userRepository.Get(id));
+            return this._userRepository.Get(id);
         }
 
-        public int SaveUserInfo(UserDto model)
+        public int SaveUserInfo(Core.User.User model)
         {
             var user = Mapper.Map<Core.User.User>(model);
             if (user.Id == 0)

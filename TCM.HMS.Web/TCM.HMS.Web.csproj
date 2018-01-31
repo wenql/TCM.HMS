@@ -374,7 +374,10 @@
     <Content Include="Areas\WeiXin\Content\aui.css" />
     <Content Include="Areas\WeiXin\Content\mobiscroll.css" />
     <Content Include="Areas\WeiXin\Content\mobiscroll_date.css" />
+    <Content Include="Areas\WeiXin\Content\risk_test.css" />
     <Content Include="Areas\WeiXin\Images\bg.png" />
+    <Content Include="Areas\WeiXin\Images\test_card_bg.png" />
+    <Content Include="Areas\WeiXin\Scripts\answerSheet.js" />
     <Content Include="Areas\WeiXin\Scripts\api.js" />
     <Content Include="Areas\WeiXin\Scripts\aui-actionsheet.js" />
     <Content Include="Areas\WeiXin\Scripts\aui-collapse.js" />
@@ -393,6 +396,8 @@
     <Content Include="Areas\WeiXin\Scripts\aui-tab.js" />
     <Content Include="Areas\WeiXin\Scripts\aui-toast.js" />
     <Content Include="Areas\WeiXin\Scripts\jquery.min.js" />
+    <Content Include="Areas\WeiXin\Scripts\knockout-3.4.2.js" />
+    <Content Include="Areas\WeiXin\Scripts\knockout.mapping-latest.js" />
     <Content Include="Areas\WeiXin\Scripts\mobiscroll.js" />
     <Content Include="Areas\WeiXin\Scripts\mobiscroll_date.js" />
     <Content Include="Content\AdminLTE.min.css" />
@@ -482,6 +487,7 @@
     </Compile>
     <Compile Include="Models\Layout\SideBarNavViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadioButtonList.cs" />
     <Compile Include="Views\HMSWebViewPageBase.cs" />
     <Compile Include="Views\UrlChecker.cs" />
   </ItemGroup>
@@ -506,6 +512,7 @@
     <Content Include="Views\Physique\SubjectForm.cshtml" />
     <Content Include="Views\Physique\Document.cshtml" />
     <Content Include="Areas\WeiXin\Views\SignHealth\SignUp.cshtml" />
+    <Content Include="Areas\WeiXin\Views\SignHealth\Exam.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,0 +1,142 @@
+﻿<style type="text/css">
+    .aui-list-item p {
+        text-align: left;
+        line-height: 20px;
+    }
+
+    .aui-popup-content p.t {
+        text-indent: 32px;
+        text-align: left;
+        line-height: 20px;
+    }
+</style>
+<header class="aui-bar aui-bar-nav">
+    体质辨识
+</header>
+<div class="aui-content">
+    <div class="aui-progress aui-progress-xxs">
+        <div class="aui-progress-bar" style="width: 0%;"></div>
+    </div>
+    <!--ko foreach:subjectItems-->
+    <ul data-bind="visible:parseInt($root.rowIndex())==parseInt(rowIndex())" class="aui-list">
+        <li class="aui-list-item" style="padding:0.75rem !important;">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <p data-bind="text:'Q'+rowIndex()+'、'+title()"></p>
+                </div>
+            </div>
+        </li>
+        <!--ko foreach:options-->
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <label>
+                    <input data-bind="attr:{value:value,name:$parent.rowIndex()+'radio'}" class="aui-radio" type="radio" />
+                    <!--ko text:text--><!--/ko-->
+                </label>
+            </div>
+        </li>
+        <!--/ko-->
+    </ul>
+    <!--/ko-->
+    <div class="aui-content-padded">
+        <div data-bind="visible:parseInt(rowIndex())>1,click:pre" class="aui-btn aui-btn-danger">上一题</div>
+        <div data-bind="visible:parseInt(rowIndex())<subjectItems().length,click:next" class="aui-btn aui-btn-danger">下一题</div>
+        <div class="aui-pull-right" style="padding: 0.25rem 0rem;"><p>1/20</p></div>
+    </div>
+</div>
+<div class="aui-mask aui-mask-in"></div>
+<div class="aui-popup aui-popup-top aui-popup-in" style="display: block;top:120px;margin-left:-40%;width:80%;">
+    <div class="aui-popup-content">
+        <header class="aui-bar aui-border-b" style="height:2.25rem;line-height:2.25rem;">
+            说明
+        </header>
+        <div class="aui-content-padded">
+            <p class="t">逐项阅读每一个问题，根据自己近一年的体验和感觉，在最符合您的选项进行选择。如果某一个问题您不能肯定回答，请选择最接近您实际情况的选项，每一个问题只能选择一个选项。</p>
+            <ul class="aui-list aui-form-list">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <p>[没有]从来不，根本似乎没有发生</p>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <p>[很少]有一点，好像有，不过很久没有发生过了或者好像是偶然的事情</p>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <p>[有时]有些，实际不定出现，好像也没有什么规律</p>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <p> [经常]我有这个现象，好像已经有一定规律</p>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <p> [总是]非常，频繁出现</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="aui-col-xs-12 aui-padded-15">
+                <p>
+                    <div onclick="submit();" class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm">进入答题</div>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/Areas/WeiXin/Scripts/jquery.min.js"></script>
+    <script src="~/Areas/WeiXin/Scripts/knockout-3.4.2.js"></script>
+    <script src="~/Areas/WeiXin/Scripts/knockout.mapping-latest.js"></script>
+    <script type="text/javascript">
+        function submit() {
+            $(".aui-popup").removeClass("aui-popup-in");
+            $(".aui-mask").removeClass("aui-mask-in");
+        }
+        var provider = {};
+        $(function () {
+            provider = {
+                viewModel: new function () {
+                    var self = this;
+                    self.subjectItems = ko.observableArray([]);
+                    self.item = ko.observable();
+                    self.rowIndex = ko.observable(1);
+                    self.pre = function () {
+                        self.rowIndex(parseInt(self.rowIndex()) - 1)
+                    };
+                    self.next = function () {
+                        self.rowIndex(parseInt(self.rowIndex()) + 1)
+                    };
+                }(),
+                _viewModelCtor: function () {
+                    var self = this.viewModel;
+                    $.ajax({
+                        type: 'get',
+                        dataType: "json",
+                        url: '/Weixin/SignHealth/GetSubject',
+                        cache: false,
+                        async: true,
+                        success: function (data) {
+                            self.subjectItems(ko.mapping.fromJS(data.result).data());
+                        },
+                        error: function (data) {
+                            alert("error:" + JSON.stringify(data));
+                        }
+                    });
+                },
+                _ctor: function () {
+                    this._viewModelCtor(),
+                        ko.applyBindings(this.viewModel);
+                    $('.aui-radio').change(function () {
+                        if ($(this).get(0).checked) {
+
+                        }
+                    });
+                }
+            }, provider._ctor();
+        });
+    </script>
+}

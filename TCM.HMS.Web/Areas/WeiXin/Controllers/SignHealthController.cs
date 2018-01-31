@@ -11,6 +11,7 @@ using TCM.HMS.Application.Physique;
 using TCM.HMS.Application.User;
 using TCM.HMS.Application.User.Dto;
 using TCM.HMS.Core.User;
+using TCM.HMS.Application.Physique.Dto;
 
 namespace TCM.HMS.Web.Areas.WeiXin.Controllers
 {
@@ -54,7 +55,7 @@ namespace TCM.HMS.Web.Areas.WeiXin.Controllers
             //expires_in = refreshAccess_token.expires_in;
             //userinfo = OAuth2API.GetUserInfo(access_token, openId);
 
-            var user = new UserDto { OpenId = "1" };
+            var user = new User { OpenId = "1" };
             user.Id = this._iUserAppService.SaveUserInfo(user);
             ViewBag.UserId = user.Id;
 
@@ -87,6 +88,46 @@ namespace TCM.HMS.Web.Areas.WeiXin.Controllers
             this._iUserAppService.SaveUserInfo(userinfo);
 
             return base.Json(new { success = true, userId = userinfo.Id });
+        }
+
+        /// <summary>
+        /// 答题
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public ActionResult Exam(int userId)
+        {
+            var userinfo = this._iUserAppService.GetUser(userId);
+            if (userinfo == null)
+            {
+                throw new UserFriendlyException("授权已过期");
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public JsonResult GetSubject()
+        {
+            var data = this._iPhysiqueAppService.GetSubjects().ToList();
+            var index = 1;
+            data.ForEach(x =>
+            {
+                var arr = x.Scores.Split(',');
+                x.Options = new List<SelectListItem>
+                        {
+                            new SelectListItem{Text="没有",Value=arr[0]},
+                            new SelectListItem{Text="很少",Value=arr[1]},
+                            new SelectListItem{Text="有时",Value=arr[2]},
+                            new SelectListItem{Text="经常",Value=arr[3]},
+                            new SelectListItem{Text="总是",Value=arr[4]}
+                        };
+                x.RowIndex = index;
+                index++;
+            });
+            return base.Json(new
+            {
+                Data = data
+            }, JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -28,6 +28,11 @@ namespace TCM.HMS.Application.Physique.Dto
         /// </summary>
         public string Scores { get; set; }
 
+        /// <summary>
+        /// 限定性别
+        /// </summary>
+        public int OnlySex { get; set; }
+
         public int Score1 { get; set; }
 
         public int Score2 { get; set; }
