@@ -2996,7 +2996,7 @@ textarea {
 
 @font-face {
     font-family: "aui_iconfont";
-    src: url('aui-iconfont.2.0.ttf') format('truetype');
+    src: url('aui-iconfont.ttf') format('truetype');
 }
 
 .aui-iconfont {

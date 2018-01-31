@@ -513,6 +513,8 @@
     <Content Include="Views\Physique\Document.cshtml" />
     <Content Include="Areas\WeiXin\Views\SignHealth\SignUp.cshtml" />
     <Content Include="Areas\WeiXin\Views\SignHealth\Exam.cshtml" />
+    <Content Include="Areas\WeiXin\Views\SignHealth\Analysis.cshtml" />
+    <Content Include="Areas\WeiXin\Views\Shared\Error.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

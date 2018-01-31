@@ -15,7 +15,7 @@
 </header>
 <div class="aui-content">
     <div class="aui-progress aui-progress-xxs">
-        <div class="aui-progress-bar" style="width: 0%;"></div>
+        <div class="aui-progress-bar" data-bind="style:{width:parseInt(rowIndex()+1)/subjectItems().length*100+'%'}" style="width: 0%;"></div>
     </div>
 
     <ul class="aui-list">
@@ -30,7 +30,7 @@
         <li class="aui-list-item">
             <div class="aui-list-item-inner">
                 <label>
-                    <input data-bind="attr:{value:value,name:$root.item().rowIndex()+'radio'}" class="aui-radio" type="radio" />
+                    <input data-bind="attr:{value:value,name:$root.item().rowIndex()+'radio'},checked:$root.item().score" class="aui-radio" type="radio" />
                     <!--ko text:text--><!--/ko-->
                 </label>
             </div>
@@ -39,9 +39,10 @@
     </ul>
 
     <div class="aui-content-padded">
-        <a data-bind="visible:parseInt(rowIndex())>1,click:pre" class="aui-btn aui-btn-danger">上一题</a>
-        <a data-bind="visible:parseInt(rowIndex())<subjectItems().length,click:next" class="aui-btn aui-btn-danger">下一题</a>
-        <div class="aui-pull-right" style="padding: 0.25rem 0rem;"><p>1/20</p></div>
+        <div data-bind="visible:parseInt(rowIndex())>0,click:pre" class="aui-btn aui-btn-danger">上一题</div>
+        <div data-bind="visible:parseInt(rowIndex())<subjectItems().length-1,click:next" class="aui-btn aui-btn-danger">下一题</div>
+        <div data-bind="visible:parseInt(rowIndex())==subjectItems().length-1&&item().score()>0,click:save" class="aui-btn aui-btn-danger">保存</div>
+        <div class="aui-pull-right" style="padding: 0.25rem 0rem;"><p data-bind="text:parseInt(rowIndex()+1)+'/'+subjectItems().length">1/20</p></div>
     </div>
 </div>
 <div class="aui-mask aui-mask-in"></div>
@@ -91,11 +92,13 @@
     <script src="~/Areas/WeiXin/Scripts/jquery.min.js"></script>
     <script src="~/Areas/WeiXin/Scripts/knockout-3.4.2.js"></script>
     <script src="~/Areas/WeiXin/Scripts/knockout.mapping-latest.js"></script>
+    <script src="~/Areas/WeiXin/Scripts/aui-toast.js"></script>
     <script type="text/javascript">
         function submit() {
-            $(".aui-popup").removeClass("aui-popup-in");
-            $(".aui-mask").removeClass("aui-mask-in");
+            $(".aui-popup").remove();
+            $(".aui-mask").remove();
         }
+
         var provider = {};
         $(function () {
             provider = {
@@ -109,21 +112,86 @@
                         self.item(self.subjectItems()[self.rowIndex()]);
                     };
                     self.next = function () {
+                        if (self.item().score() === 0) {
+                            new auiToast().fail({
+                                title: "请先选择",
+                                duration: 2000
+                            });
+                            return;
+                        }
                         self.rowIndex(parseInt(self.rowIndex()) + 1);
                         self.item(self.subjectItems()[self.rowIndex()]);
                     };
+                    self.save = function () {
+                        var postData = [];
+                        for (var i = 1; i < 10; i++) {
+                            postData.push({
+                                categoryId: i,
+                                score: 0
+                            });
+                        }
+                        var d = self.subjectItems();
+                        for (var i = 0; i < d.length; i++) {
+                            for (var j = 0; j < postData.length; j++) {
+                                if (postData[j].categoryId == d[i].categoryId()) {
+                                    postData[j].score = parseInt(postData[j].score) + parseInt(d[i].score());
+                                }
+                            }
+                        }
+                        var toast = new auiToast();
+                        toast.loading({
+                            title: "提交中...",
+                            duration: 2000
+                        },
+                            function (ret) {
+                                $.ajax({
+                                    url: '/Weixin/SignHealth/Score',
+                                    type: "POST",
+                                    data: JSON.stringify({userId: '@ViewBag.UserId', scores: postData }),
+                                    contentType: "application/json",
+                                    async: true,
+                                    success: function (data) {
+                                        toast.hide();
+                                        if (data.result.success) {
+                                            setTimeout(function () {
+                                                location.href =
+                                                    '/Weixin/SignHealth/analysis?userId=' + data.result.userId;
+                                            },
+                                                1000);
+                                        } else {
+                                            new auiToast().fail({
+                                                title: "提交失败",
+                                                duration: 2000
+                                            });
+                                        }
+                                    },
+                                    error: function (data) {
+                                        toast.hide();
+                                        alert("error:" + JSON.stringify(data));
+                                    }
+                                });
+                            });
+                    }
                 }(),
                 _viewModelCtor: function () {
                     var self = this.viewModel;
                     $.ajax({
                         type: 'get',
                         dataType: "json",
-                        url: '/Weixin/SignHealth/GetSubject',
+                        url: '/Weixin/SignHealth/GetSubject?userId='+@ViewBag.UserId,
                         cache: false,
                         async: true,
                         success: function (data) {
                             self.subjectItems(ko.mapping.fromJS(data.result).data());
                             self.item(self.subjectItems()[self.rowIndex()]);
+                            for (var i = 0; i < self.subjectItems().length; i++) {
+                                self.subjectItems()[i].score.subscribe(function (v) {
+                                    if (v > 0 && self.rowIndex() + 1 !== self.subjectItems().length) {
+                                        self.rowIndex(parseInt(self.rowIndex()) + 1);
+                                        self.item(self.subjectItems()[self.rowIndex()]);
+                                    }
+                                });
+                            }
                             ko.applyBindings(self);
                         },
                         error: function (data) {
@@ -136,5 +204,6 @@
                 }
             }, provider._ctor();
         });
+
     </script>
 }

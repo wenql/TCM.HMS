@@ -72,6 +72,12 @@ namespace TCM.HMS.Application.Physique
             this._physiqueDocumentRepository.InsertOrUpdate(Mapper.Map<Physique_Document>(model));
         }
 
+        public List<DocumentDto> GetDocuments(List<int> categoryIds)
+        {
+            return this._physiqueDocumentRepository.GetAllList().FindAll(t => categoryIds.Any(x => x == t.CategoryId))
+                .Select(Mapper.Map<DocumentDto>).ToList();
+        }
+
         public List<SubjectListDto> GetSubjects()
         {
             return (from c in this._physiqueSubjectRepository.GetAll() orderby c.CategoryId, c.Id select c)

@@ -12,6 +12,7 @@ using TCM.HMS.Application.User;
 using TCM.HMS.Application.User.Dto;
 using TCM.HMS.Core.User;
 using TCM.HMS.Application.Physique.Dto;
+using TCM.HMS.Core.Physique;
 
 namespace TCM.HMS.Web.Areas.WeiXin.Controllers
 {
@@ -45,7 +46,7 @@ namespace TCM.HMS.Web.Areas.WeiXin.Controllers
             //double expires_in = 0;
             //var access_token = "";
             //var openId = "";
-            //var token = OAuth2API.GetAccessToken(code, "AppID", "AppSecret");
+            //var token = OAuth2API.GetAccessToken(code, "wx25750ab6611b4901", "f178fca842e26a3563e168f7bfb15e58");
             //dynamic userinfo;
 
             //var refreshAccess_token = OAuth2API.RefreshAccess_token(token.refresh_token, "AppID");
@@ -90,6 +91,27 @@ namespace TCM.HMS.Web.Areas.WeiXin.Controllers
             return base.Json(new { success = true, userId = userinfo.Id });
         }
 
+        public JsonResult Score(int userId, List<ScoreResult> scores)
+        {
+            if (userId == 0)
+            {
+                return base.Json(new { success = false });
+            }
+
+            var userinfo = this._iUserAppService.GetUser(userId);
+            if (userinfo == null)
+            {
+                return base.Json(new { success = false });
+            }
+
+            var str = "";
+            scores.ForEach(x => str += (x.CategoryId + "|" + x.Score) + ",");
+            userinfo.PhysiqueScores = str.TrimEnd(',');
+            this._iUserAppService.SaveUserInfo(userinfo);
+
+            return base.Json(new { success = true, userId = userinfo.Id });
+        }
+
         /// <summary>
         /// 答题
         /// </summary>
@@ -102,12 +124,20 @@ namespace TCM.HMS.Web.Areas.WeiXin.Controllers
             {
                 throw new UserFriendlyException("授权已过期");
             }
+
+            ViewBag.UserId = userId;
             return View();
         }
 
         [HttpGet]
-        public JsonResult GetSubject()
+        public JsonResult GetSubject(int userId)
         {
+            var userinfo = this._iUserAppService.GetUser(userId);
+            if (userinfo == null)
+            {
+                throw new UserFriendlyException("授权已过期");
+            }
+
             var data = this._iPhysiqueAppService.GetSubjects().ToList();
             var index = 1;
             data.ForEach(x =>
@@ -126,8 +156,49 @@ namespace TCM.HMS.Web.Areas.WeiXin.Controllers
             });
             return base.Json(new
             {
-                Data = data
+                Data = data.FindAll(x => x.OnlySex == 2 || x.OnlySex == userinfo.Sex)
             }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Analysis(int userId)
+        {
+            var userinfo = this._iUserAppService.GetUser(userId);
+            if (userinfo == null)
+            {
+                throw new UserFriendlyException("授权已过期");
+            }
+
+            if (string.IsNullOrEmpty(userinfo.PhysiqueScores))
+            {
+                return RedirectToAction("Index");
+            }
+
+            var arr = userinfo.PhysiqueScores.Split(',');
+            var phz = arr.FirstOrDefault(x => int.Parse(x.Split('|')[0]) == (int)SubjectCategory.YinYangHarmony);
+            if (phz == null)
+            {
+                return RedirectToAction("Index");
+            }
+            var other = arr.Where(x => int.Parse(x.Split('|')[0]) != (int)SubjectCategory.YinYangHarmony).ToList();
+
+            var tz = new List<int>();
+            if (Convert.ToDouble(phz.Split('|')[1]) / Convert.ToDouble(32) * 100 >= 60 && other.All(x => Convert.ToDouble(x.Split('|')[1]) / Convert.ToDouble(32) * 100 < 40))
+            {
+                tz.Add((int)SubjectCategory.YinYangHarmony);
+            }
+
+            other.ForEach(x =>
+            {
+                if (Convert.ToDouble(x.Split('|')[1]) / Convert.ToDouble(32) * 100 >= 30)
+                {
+                    tz.Add(int.Parse(x.Split('|')[0]));
+                }
+            });
+            if (!tz.Any())
+            {
+                return RedirectToAction("Index");
+            }
+            return View(this._iPhysiqueAppService.GetDocuments(tz));
         }
     }
 }

@@ -187,6 +187,7 @@
     <Compile Include="Physique\Dto\BootConfigDto.cs" />
     <Compile Include="Physique\Dto\DocumentDto.cs" />
     <Compile Include="Physique\Dto\PhysiqueSubjects.cs" />
+    <Compile Include="Physique\Dto\ScoreResult.cs" />
     <Compile Include="Physique\Dto\SubjectDto.cs" />
     <Compile Include="Physique\Dto\SubjectListDto.cs" />
     <Compile Include="Physique\IPhysiqueAppService.cs" />

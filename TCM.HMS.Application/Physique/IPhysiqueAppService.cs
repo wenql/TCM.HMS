@@ -58,5 +58,7 @@ namespace TCM.HMS.Application.Physique
         DocumentDto GetDocument(int categoryId);
 
         void SaveDocument(DocumentDto model);
+
+        List<DocumentDto> GetDocuments(List<int> categoryIds);
     }
 }

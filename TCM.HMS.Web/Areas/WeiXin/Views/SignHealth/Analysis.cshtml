@@ -1,0 +1,218 @@
+﻿@model List<TCM.HMS.Application.Physique.Dto.DocumentDto>
+<style type="text/css">
+    .title {
+        text-align: center;
+        width: 6rem;
+        height: 6rem;
+        background-color: #e1ca87;
+        border-radius: 3rem;
+        margin: 0 auto;
+        line-height: 6rem;
+    }
+
+        .title p {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+    .aui-tab-item.aui-active {
+        color: #e1ca87;
+        border-bottom: 2px solid #e1ca87;
+        z-index: 100;
+    }
+
+    .aui-list {
+        display: none;
+    }
+
+        .aui-list.active {
+            display: block;
+        }
+
+        .aui-list .aui-list-header {
+            background-color: #ffffff !important;
+        }
+
+            .aui-list .aui-list-header div {
+                background-color: #e1ca87;
+                padding: 0.3rem;
+                color: #ffffff;
+                font-size: 0.8rem;
+            }
+
+        .aui-list .aui-list-item:after {
+            height: 0 !important;
+        }
+
+        .aui-list:after {
+            height: 0 !important;
+        }
+    .footer {
+        border-top:1px solid #e1ca87;
+    }
+</style>
+<header class="aui-bar aui-bar-nav">
+    体质辨识结果
+</header>
+<div class="aui-content">
+    <div class="aui-tab" id="tab">
+        @{
+            var index = 0;
+        }
+        @foreach (var item in Model)
+        {
+            var classname = index == 0 ? "aui-tab-item aui-active" : "aui-tab-item";
+            <div class="@classname">@item.CategoryName</div>
+            index++;
+        }
+    </div>
+</div>
+<div class="aui-content scroll" style="overflow-y: auto;">
+    @{
+        index = 0;
+    }
+    @foreach (var item in Model)
+    {
+        var classname = index == 0 ? "aui-list aui-form-list active" : "aui-list aui-form-list";
+        <ul class="@classname">
+            @{
+                if (!string.IsNullOrEmpty(item.Zttz))
+                {
+                    <li class="aui-list-header">
+                        <div>总体特征</div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <p>@item.Zttz</p>
+                        </div>
+                    </li>
+                }
+                if (!string.IsNullOrEmpty(item.Xttz))
+                {
+                    <li class="aui-list-header">
+                        <div>形体特征</div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <p>@item.Xttz</p>
+                        </div>
+                    </li>
+                }
+                if (!string.IsNullOrEmpty(item.Cjbx))
+                {
+                    <li class="aui-list-header">
+                        <div>常见表现</div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <p>@item.Cjbx</p>
+                        </div>
+                    </li>
+                }
+                if (!string.IsNullOrEmpty(item.Xltz))
+                {
+                    <li class="aui-list-header">
+                        <div>心理特征</div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <p>@item.Xltz</p>
+                        </div>
+                    </li>
+                }
+                if (!string.IsNullOrEmpty(item.Fbqx))
+                {
+                    <li class="aui-list-header">
+                        <div>发病倾向</div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <p>@item.Fbqx</p>
+                        </div>
+                    </li>
+                }
+                if (!string.IsNullOrEmpty(item.Hjsy))
+                {
+                    <li class="aui-list-header">
+                        <div>对外界环境适应能力</div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <p>@item.Hjsy</p>
+                        </div>
+                    </li>
+                }
+                if (!string.IsNullOrEmpty(item.Ydty))
+                {
+                    <li class="aui-list-header">
+                        <div>运动调养</div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <p>@item.Ydty</p>
+                        </div>
+                    </li>
+                }
+                if (!string.IsNullOrEmpty(item.Ywty))
+                {
+                    <li class="aui-list-header">
+                        <div>药物调养</div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <p>@item.Ywty</p>
+                        </div>
+                    </li>
+                }
+                if (!string.IsNullOrEmpty(item.Tyff))
+                {
+                    <li class="aui-list-header">
+                        <div>调养方法</div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <p>@item.Tyff</p>
+                        </div>
+                    </li>
+                }
+                if (!string.IsNullOrEmpty(item.Jksp))
+                {
+                    <li class="aui-list-header">
+                        <div>健康食谱</div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <p>@item.Jksp</p>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+        index++;
+    }
+</div>
+<footer class="aui-bar aui-bar-tab footer">
+    <div class="aui-row" style="padding:0.2rem;">
+        <div class="aui-col-xs-12">
+            <div class="aui-col-xs-4" style="padding:0.2rem;"><div class="aui-btn aui-btn-block aui-btn-outlined aui-btn-sm">家庭医生</div></div>
+            <div class="aui-col-xs-4" style="padding:0.2rem;"><div class="aui-btn aui-btn-block aui-btn-outlined aui-btn-sm">夜诊服务</div></div>
+            <div class="aui-col-xs-4" style="padding:0.2rem;"><div class="aui-btn aui-btn-block aui-btn-outlined aui-btn-sm">健康门诊</div></div>
+        </div>
+    </div>
+</footer>
+@section Scripts{
+    <script src="~/Areas/WeiXin/Scripts/jquery.min.js"></script>
+    <script src="~/Areas/WeiXin/Scripts/aui-tab.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".scroll").height($(window).height() - $(".aui-bar").height() - $(".aui-content").height() - $(".footer").height());
+        });
+        var tab = new auiTab({
+            element: document.getElementById("tab")
+        }, function (ret) {
+            $(".scroll ul").removeClass("active");
+            $(".scroll ul:eq(" + (ret.index - 1) + ")").addClass("active");
+        });
+    </script>
+}
