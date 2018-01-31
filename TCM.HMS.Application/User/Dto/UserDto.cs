@@ -35,5 +35,7 @@ namespace TCM.HMS.Application.User.Dto
         public string IdCard { get; set; }
 
         public string PhysiqueScores { get; set; }
+
+        public string ExamResult { get; set; }
     }
 }

@@ -21,7 +21,7 @@ namespace TCM.HMS.Application.User
 
         public Core.User.User GetUser(string openId)
         {
-            return 
+            return
                 (from c in this._userRepository.GetAll() select c).FirstOrDefault(x => x.OpenId == openId);
         }
 
@@ -37,6 +37,12 @@ namespace TCM.HMS.Application.User
                 user.CreateDate = DateTime.Now;
 
             return this._userRepository.InsertOrUpdateAndGetId(user);
+        }
+
+        public List<UserDto> GetUsers()
+        {
+            return this._userRepository.GetAllList().OrderByDescending(x => x.Id).ToList().Select(Mapper.Map<UserDto>)
+                .ToList();
         }
     }
 }

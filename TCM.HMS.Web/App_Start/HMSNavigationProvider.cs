@@ -19,7 +19,7 @@ namespace TCM.HMS.Web
                     new MenuItemDefinition("Physique", new LocalizableString("体质辨识", HMSConsts.LocalizationSourceName), icon: "fa fa-hospital-o")
                         .AddItem(new MenuItemDefinition("BootConfig", new LocalizableString("引导页", HMSConsts.LocalizationSourceName), icon: "fa fa-circle-o", url: "/physique/bootConfig"))
                         .AddItem(new MenuItemDefinition("Categories", new LocalizableString("体质分类", HMSConsts.LocalizationSourceName), icon: "fa fa-circle-o", url: "/physique/categories"))
-                );
+                ).AddItem(new MenuItemDefinition("UserIndex", new LocalizableString("用户管理", HMSConsts.LocalizationSourceName), icon: "fa fa-user", url: "/user/index"));
         }
     }
 }

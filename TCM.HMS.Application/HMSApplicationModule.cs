@@ -24,7 +24,7 @@ namespace TCM.HMS.Application
                 cfg.CreateMap<DocumentDto, Physique_Document>();
                 cfg.CreateMap<Physique_Document, DocumentDto>();
 
-                cfg.CreateMap<Core.User.User, UserDto>();
+                cfg.CreateMap<Core.User.User, UserDto>().ForMember(x => x.ExamResult, opt => opt.Ignore());
                 cfg.CreateMap<UserDto, Core.User.User>().ForMember(x => x.CreateDate, opt => opt.Ignore());
             });
         }

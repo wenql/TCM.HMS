@@ -15,5 +15,7 @@ namespace TCM.HMS.Application.User
         Core.User.User GetUser(int id);
 
         int SaveUserInfo(Core.User.User model);
+
+        List<UserDto> GetUsers();
     }
 }

@@ -482,6 +482,7 @@
     <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\HMSControllerBase.cs" />
     <Compile Include="Controllers\PhysiqueController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -516,6 +517,7 @@
     <Content Include="Areas\WeiXin\Views\SignHealth\Analysis.cshtml" />
     <Content Include="Areas\WeiXin\Views\Shared\Error.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Views\User\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

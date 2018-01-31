@@ -941,3 +941,145 @@ DEBUG 2018-01-31 23:08:17,139 [1    ] Abp.AutoMapper.AbpAutoMapperModule       -
 DEBUG 2018-01-31 23:08:17,139 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.SubjectDto
 DEBUG 2018-01-31 23:08:17,217 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.User.IUserAppService' with service name 'app/user'.
 DEBUG 2018-01-31 23:08:17,218 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.Physique.IPhysiqueAppService' with service name 'app/physique'.
+DEBUG 2018-01-31 23:26:37,049 [24   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-31 23:26:37,050 [24   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:26:37,051 [24   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:26:37,051 [24   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-31 23:26:45,417 [30   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-31 23:26:45,428 [30   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-01-31 23:26:45,433 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,435 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,435 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,435 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,435 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,435 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,435 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,435 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,436 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Core.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,436 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Application.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,436 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,436 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,436 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:45,438 [30   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2018-01-31 23:26:45,651 [30   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:26:46,466 [30   ] Abp.Localization.LocalizationManager     - Localization disabled.
+DEBUG 2018-01-31 23:26:46,559 [30   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:26:46,593 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 4 classes define auto mapping attributes
+DEBUG 2018-01-31 23:26:46,593 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.User.Dto.UserDto
+DEBUG 2018-01-31 23:26:46,596 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.BootConfigDto
+DEBUG 2018-01-31 23:26:46,596 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.DocumentDto
+DEBUG 2018-01-31 23:26:46,596 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.SubjectDto
+DEBUG 2018-01-31 23:26:46,747 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.User.IUserAppService' with service name 'app/user'.
+DEBUG 2018-01-31 23:26:46,748 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.Physique.IPhysiqueAppService' with service name 'app/physique'.
+DEBUG 2018-01-31 23:27:44,843 [29   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-31 23:27:44,844 [29   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:27:44,844 [29   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:27:44,844 [29   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-31 23:37:37,959 [30   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-31 23:37:37,971 [30   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-01-31 23:37:37,975 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,977 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,977 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,977 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,977 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,977 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,977 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,978 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,978 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Core.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,978 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Application.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,978 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,978 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,978 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:37,983 [30   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2018-01-31 23:37:38,195 [30   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:38,991 [30   ] Abp.Localization.LocalizationManager     - Localization disabled.
+DEBUG 2018-01-31 23:37:39,086 [30   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:37:39,122 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 4 classes define auto mapping attributes
+DEBUG 2018-01-31 23:37:39,122 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.User.Dto.UserDto
+DEBUG 2018-01-31 23:37:39,126 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.BootConfigDto
+DEBUG 2018-01-31 23:37:39,126 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.DocumentDto
+DEBUG 2018-01-31 23:37:39,126 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.SubjectDto
+DEBUG 2018-01-31 23:37:39,309 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.User.IUserAppService' with service name 'app/user'.
+DEBUG 2018-01-31 23:37:39,310 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.Physique.IPhysiqueAppService' with service name 'app/physique'.
+DEBUG 2018-01-31 23:37:51,937 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-31 23:37:52,058 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-01-31 23:37:52,063 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,064 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,064 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,065 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,065 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,065 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,065 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Core.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Application.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,069 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2018-01-31 23:37:52,541 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:37:52,787 [1    ] Abp.Localization.LocalizationManager     - Localization disabled.
+DEBUG 2018-01-31 23:37:53,013 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:37:53,099 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 4 classes define auto mapping attributes
+DEBUG 2018-01-31 23:37:53,099 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.User.Dto.UserDto
+DEBUG 2018-01-31 23:37:53,102 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.BootConfigDto
+DEBUG 2018-01-31 23:37:53,103 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.DocumentDto
+DEBUG 2018-01-31 23:37:53,103 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.SubjectDto
+DEBUG 2018-01-31 23:37:53,318 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.User.IUserAppService' with service name 'app/user'.
+DEBUG 2018-01-31 23:37:53,319 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.Physique.IPhysiqueAppService' with service name 'app/physique'.
+DEBUG 2018-01-31 23:38:35,612 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-31 23:38:35,641 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-01-31 23:38:35,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,647 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,647 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,647 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,647 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,647 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Core.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Application.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:35,651 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2018-01-31 23:38:35,953 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:38:37,416 [1    ] Abp.Localization.LocalizationManager     - Localization disabled.
+DEBUG 2018-01-31 23:38:37,535 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:38:37,598 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 4 classes define auto mapping attributes
+DEBUG 2018-01-31 23:38:37,598 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.User.Dto.UserDto
+DEBUG 2018-01-31 23:38:37,601 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.BootConfigDto
+DEBUG 2018-01-31 23:38:37,601 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.DocumentDto
+DEBUG 2018-01-31 23:38:37,601 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.SubjectDto
+DEBUG 2018-01-31 23:38:37,847 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.User.IUserAppService' with service name 'app/user'.
+DEBUG 2018-01-31 23:38:37,848 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.Physique.IPhysiqueAppService' with service name 'app/physique'.
+DEBUG 2018-01-31 23:47:03,761 [44   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-31 23:47:03,762 [44   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:47:03,763 [44   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:47:03,763 [44   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-31 23:47:07,967 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-31 23:47:07,979 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-01-31 23:47:07,984 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Web.HMSWebModule, TCM.HMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSDataModule, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Core.HMSCoreModule, TCM.HMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.Application.HMSApplicationModule, TCM.HMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: TCM.HMS.HMSWebApiModule, TCM.HMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:07,989 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2018-01-31 23:47:08,207 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: TCM.HMS.EntityFramework.HMSDbContext, TCM.HMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 23:47:09,033 [1    ] Abp.Localization.LocalizationManager     - Localization disabled.
+DEBUG 2018-01-31 23:47:09,136 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-31 23:47:09,171 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 4 classes define auto mapping attributes
+DEBUG 2018-01-31 23:47:09,171 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.User.Dto.UserDto
+DEBUG 2018-01-31 23:47:09,174 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.BootConfigDto
+DEBUG 2018-01-31 23:47:09,174 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.DocumentDto
+DEBUG 2018-01-31 23:47:09,174 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - TCM.HMS.Application.Physique.Dto.SubjectDto
+DEBUG 2018-01-31 23:47:09,344 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.User.IUserAppService' with service name 'app/user'.
+DEBUG 2018-01-31 23:47:09,345 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'TCM.HMS.Application.Physique.IPhysiqueAppService' with service name 'app/physique'.
