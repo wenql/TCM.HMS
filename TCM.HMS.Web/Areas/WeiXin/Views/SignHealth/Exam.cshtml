@@ -17,30 +17,30 @@
     <div class="aui-progress aui-progress-xxs">
         <div class="aui-progress-bar" style="width: 0%;"></div>
     </div>
-    <!--ko foreach:subjectItems-->
-    <ul data-bind="visible:parseInt($root.rowIndex())==parseInt(rowIndex())" class="aui-list">
+
+    <ul class="aui-list">
         <li class="aui-list-item" style="padding:0.75rem !important;">
             <div class="aui-list-item-inner">
                 <div class="aui-list-item-text">
-                    <p data-bind="text:'Q'+rowIndex()+'、'+title()"></p>
+                    <p data-bind="text:'Q'+item().rowIndex()+'、'+item().title()"></p>
                 </div>
             </div>
         </li>
-        <!--ko foreach:options-->
+        <!--ko foreach:item().options-->
         <li class="aui-list-item">
             <div class="aui-list-item-inner">
                 <label>
-                    <input data-bind="attr:{value:value,name:$parent.rowIndex()+'radio'}" class="aui-radio" type="radio" />
+                    <input data-bind="attr:{value:value,name:$root.item().rowIndex()+'radio'}" class="aui-radio" type="radio" />
                     <!--ko text:text--><!--/ko-->
                 </label>
             </div>
         </li>
         <!--/ko-->
     </ul>
-    <!--/ko-->
+
     <div class="aui-content-padded">
-        <div data-bind="visible:parseInt(rowIndex())>1,click:pre" class="aui-btn aui-btn-danger">上一题</div>
-        <div data-bind="visible:parseInt(rowIndex())<subjectItems().length,click:next" class="aui-btn aui-btn-danger">下一题</div>
+        <a data-bind="visible:parseInt(rowIndex())>1,click:pre" class="aui-btn aui-btn-danger">上一题</a>
+        <a data-bind="visible:parseInt(rowIndex())<subjectItems().length,click:next" class="aui-btn aui-btn-danger">下一题</a>
         <div class="aui-pull-right" style="padding: 0.25rem 0rem;"><p>1/20</p></div>
     </div>
 </div>
@@ -103,12 +103,14 @@
                     var self = this;
                     self.subjectItems = ko.observableArray([]);
                     self.item = ko.observable();
-                    self.rowIndex = ko.observable(1);
+                    self.rowIndex = ko.observable(0);
                     self.pre = function () {
-                        self.rowIndex(parseInt(self.rowIndex()) - 1)
+                        self.rowIndex(parseInt(self.rowIndex()) - 1);
+                        self.item(self.subjectItems()[self.rowIndex()]);
                     };
                     self.next = function () {
-                        self.rowIndex(parseInt(self.rowIndex()) + 1)
+                        self.rowIndex(parseInt(self.rowIndex()) + 1);
+                        self.item(self.subjectItems()[self.rowIndex()]);
                     };
                 }(),
                 _viewModelCtor: function () {
@@ -121,6 +123,8 @@
                         async: true,
                         success: function (data) {
                             self.subjectItems(ko.mapping.fromJS(data.result).data());
+                            self.item(self.subjectItems()[self.rowIndex()]);
+                            ko.applyBindings(self);
                         },
                         error: function (data) {
                             alert("error:" + JSON.stringify(data));
@@ -128,13 +132,7 @@
                     });
                 },
                 _ctor: function () {
-                    this._viewModelCtor(),
-                        ko.applyBindings(this.viewModel);
-                    $('.aui-radio').change(function () {
-                        if ($(this).get(0).checked) {
-
-                        }
-                    });
+                    this._viewModelCtor();
                 }
             }, provider._ctor();
         });
