@@ -13,6 +13,7 @@ using TCM.HMS.Application.User.Dto;
 using TCM.HMS.Core.User;
 using TCM.HMS.Application.Physique.Dto;
 using TCM.HMS.Core.Physique;
+using System.Net.Http;
 
 namespace TCM.HMS.Web.Areas.WeiXin.Controllers
 {
@@ -37,29 +38,60 @@ namespace TCM.HMS.Web.Areas.WeiXin.Controllers
 
         public ActionResult SignUp()
         {
-            //var code = Request.QueryString.Get("code");
-            //if (string.IsNullOrEmpty(code))
-            //{
-            //    throw new UserFriendlyException("授权失败");
-            //}
-            //var access_token_scope = "";
-            //double expires_in = 0;
-            //var access_token = "";
-            //var openId = "";
-            //var token = OAuth2API.GetAccessToken(code, "wx25750ab6611b4901", "f178fca842e26a3563e168f7bfb15e58");
-            //dynamic userinfo;
+            var code = Request.QueryString.Get("code");
+            if (string.IsNullOrEmpty(code))
+            {
+                throw new UserFriendlyException("授权失败");
+            }
+            var access_token_scope = "";
+            double expires_in = 0;
+            var access_token = "";
+            var openId = "";
+            var appId = "wx25750ab6611b4901";
+            var appSecret = "f178fca842e26a3563e168f7bfb15e58";
+            var token = OAuth2API.GetAccessToken(code, appId, appSecret);
+            dynamic userinfo;
 
-            //var refreshAccess_token = OAuth2API.RefreshAccess_token(token.refresh_token, "AppID");
-            //access_token = refreshAccess_token.access_token;
-            //openId = refreshAccess_token.openid;
-            //access_token_scope = refreshAccess_token.scope;
-            //expires_in = refreshAccess_token.expires_in;
-            //userinfo = OAuth2API.GetUserInfo(access_token, openId);
+            var refreshAccess_token = OAuth2API.RefreshAccess_token(token.refresh_token, appId);
+            //var client = new HttpClient();
+            //var result = client.GetAsync(string.Format("https://api.weixin.qq.com/sns/oauth2/refresh_token?appid={0}&grant_type=refresh_token&refresh_token={1}", appId, token.refresh_token)).Result;
+            //if (!result.IsSuccessStatusCode) return null;
+            //Logger.Debug(result.Content.ReadAsStringAsync().Result);
 
-            var user = new User { OpenId = "1" };
-            user.Id = this._iUserAppService.SaveUserInfo(user);
-            ViewBag.UserId = user.Id;
 
+            access_token = refreshAccess_token.access_token;
+            openId = refreshAccess_token.openid;
+            access_token_scope = refreshAccess_token.scope;
+            expires_in = refreshAccess_token.expires_in;
+
+            //Logger.Debug(access_token);
+
+            userinfo = OAuth2API.GetUserInfo(access_token, openId);
+            var user = new User { };
+            var openid = userinfo.openid;
+            if (userinfo != null && !string.IsNullOrEmpty(openid))
+            {
+                Logger.Debug("openid is"+openid);
+                var u = this._iUserAppService.GetUser(openid);
+                if (u != null)
+                {
+                    user = u;
+                }
+   
+                user.HeadImgUrl = userinfo.headimgurl;
+                user.NickName = userinfo.nickname;
+                user.OpenId = userinfo.openid;
+                user.Sex =Convert.ToInt32(userinfo.sex);
+                user.City = userinfo.city;
+                user.Province = userinfo.province;
+                user.Country = userinfo.country;
+                this._iUserAppService.SaveUserInfo(user);
+                ViewBag.UserId = user.Id;
+            }
+            else
+            {
+                throw new UserFriendlyException("授权失败");
+            }
             return View();
         }
 

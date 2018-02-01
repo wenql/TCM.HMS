@@ -28,7 +28,7 @@
         </li>
         <!--ko foreach:item().options-->
         <li class="aui-list-item">
-            <div class="aui-list-item-inner">
+            <div class="aui-list-item-inner" data-bind="click:function(obj){$root.item().score(obj.value())}.bind($data)">
                 <label>
                     <input data-bind="attr:{value:value,name:$root.item().rowIndex()+'radio'},checked:$root.item().score" class="aui-radio" type="radio" />
                     <!--ko text:text--><!--/ko-->
@@ -187,8 +187,10 @@
                             for (var i = 0; i < self.subjectItems().length; i++) {
                                 self.subjectItems()[i].score.subscribe(function (v) {
                                     if (v > 0 && self.rowIndex() + 1 !== self.subjectItems().length) {
-                                        self.rowIndex(parseInt(self.rowIndex()) + 1);
-                                        self.item(self.subjectItems()[self.rowIndex()]);
+                                        setTimeout(function () {
+                                            self.rowIndex(parseInt(self.rowIndex()) + 1);
+                                            self.item(self.subjectItems()[self.rowIndex()]);
+                                        }, 500);
                                     }
                                 });
                             }
